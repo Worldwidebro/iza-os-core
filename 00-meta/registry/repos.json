@@ -8,12 +8,17 @@
       "https://github.com/Microsoft/mcp-for-beginners.git",
       "https://github.com/toolsdk-ai/awesome-mcp-registry.git",
       "https://github.com/idosal/git-mcp.git",
-      "https://github.com/tadata-org/fastapi_mcp.git"
+      "https://github.com/tadata-org/fastapi_mcp.git",
+      "https://github.com/docker/mcp-registry.git"
     ],
     "claude_and_cookbooks": [
       "https://github.com/anthropics/claude-code-action.git",
       "https://github.com/davila7/claude-code-templates.git",
-      "https://github.com/anthropics/anthropic-cookbook.git"
+      "https://github.com/anthropics/anthropic-cookbook.git",
+      "https://github.com/SuperClaude-Org/SuperClaude_Framework.git",
+      "https://github.com/getAsterisk/claudia.git",
+      "https://github.com/ruvnet/claude-flow.git",
+      "https://github.com/opactorai/Claudable.git"
     ],
     "autonomous_agents": [
       "https://github.com/microsoft/autogen.git",
@@ -21,20 +26,139 @@
       "https://github.com/kortix-ai/suna.git",
       "https://github.com/Alibaba-NLP/WebAgent.git",
       "https://github.com/langchain-ai/open-swe.git",
-      "https://github.com/getzep/graphiti.git"
+      "https://github.com/getzep/graphiti.git",
+      "https://github.com/Continual-Intelligence/SEAL.git",
+      "https://github.com/gyoridavid/ai_agents_az.git",
+      "https://github.com/microsoft/ai-agents-for-beginners.git",
+      "https://github.com/bmad-code-org/BMAD-METHOD.git",
+      "https://github.com/All-Hands-AI/OpenHands.git"
     ],
     "runtimes_and_inference": [
       "https://github.com/vllm-project/vllm.git",
       "https://github.com/ggml-org/llama.cpp.git",
       "https://github.com/nomic-ai/gpt4all.git",
-      "https://github.com/unslothai/unsloth.git"
+      "https://github.com/unslothai/unsloth.git",
+      "https://github.com/unslothai/hyperlearn.git",
+      "https://github.com/rapidsai/cuml.git",
+      "https://github.com/rapidsai/cuvs.git",
+      "https://github.com/simonw/llm.git"
     ],
     "apps_and_uix": [
       "https://github.com/lobehub/lobe-chat.git",
       "https://github.com/mendableai/open-lovable.git",
       "https://github.com/menloresearch/jan.git",
       "https://github.com/midday-ai/midday.git",
-      "https://github.com/activepieces/activepieces.git"
+      "https://github.com/activepieces/activepieces.git",
+      "https://github.com/nanobrowser/nanobrowser.git",
+      "https://github.com/langgenius/dify.git",
+      "https://github.com/Canner/WrenAI.git",
+      "https://github.com/labring/FastGPT.git",
+      "https://github.com/sheshbabu/zen.git"
+    ],
+    "ai_tools_and_prompts": [
+      "https://github.com/promptslab/prompt-optimizer.git",
+      "https://github.com/mengmengfeng/Awesome_GPT_Super_Prompting.git",
+      "https://github.com/Shubhamsaboo/awesome-llm-apps.git",
+      "https://github.com/Arindam200/awesome-ai-apps.git",
+      "https://github.com/googleapis/genai-toolbox.git",
+      "https://github.com/openai/codex.git",
+      "https://github.com/openai/gpt-oss.git",
+      "https://github.com/openai/openai-cookbook.git",
+      "https://github.com/huggingface/aisheets.git"
+    ],
+    "web_scraping_and_crawling": [
+      "https://github.com/mendableai/firecrawl.git",
+      "https://github.com/dhamaniasad/HeadlessBrowsers.git",
+      "https://github.com/Browserbase/stagehand.git",
+      "https://github.com/apify/crawlee.git"
+    ],
+    "automation_and_workflows": [
+      "https://github.com/n8n-io/n8n.git",
+      "https://github.com/Zie619/n8n-workflows.git",
+      "https://github.com/enescingoz/awesome-n8n-templates.git",
+      "https://github.com/wassupjay/n8n-free-templates.git",
+      "https://github.com/simstudioai/sim.git"
+    ],
+    "development_tools": [
+      "https://github.com/tiangolo/full-stack-fastapi-postgresql.git",
+      "https://github.com/python-poetry/poetry.git",
+      "https://github.com/vitejs/vite.git",
+      "https://github.com/drizzle-team/drizzle-orm.git",
+      "https://github.com/tailwindlabs/tailwindcss.git",
+      "https://github.com/storybookjs/storybook.git",
+      "https://github.com/gothinkster/realworld.git",
+      "https://github.com/modern-backend-framework/modern-backend-framework.git"
+    ],
+    "trading_and_finance": [
+      "https://github.com/nautechsystems/nautilus_trader.git",
+      "https://github.com/OpenBB-finance/OpenBB.git",
+      "https://github.com/trimstray/the-book-of-secret-knowledge.git"
+    ],
+    "ui_frameworks": [
+      "https://github.com/lvgl/lvgl.git",
+      "https://github.com/bytedance/UI-TARS-desktop.git",
+      "https://github.com/enaqx/awesome-react.git",
+      "https://github.com/sveltejs/svelte.git"
+    ],
+    "selfhosted_and_devops": [
+      "https://github.com/awesome-selfhosted/awesome-selfhosted.git",
+      "https://github.com/self-so/self.so.git",
+      "https://github.com/external-secrets/external-secrets.git",
+      "https://github.com/syncthing/syncthing.git",
+      "https://github.com/HeyPuter/puter.git",
+      "https://github.com/hcengineering/platform.git",
+      "https://github.com/jesseduffield/lazydocker.git",
+      "https://github.com/jesseduffield/lazygit.git"
+    ],
+    "notifications_and_communication": [
+      "https://github.com/novuhq/novu.git",
+      "https://github.com/openreplay/openreplay.git",
+      "https://github.com/CapSoftware/Cap.git",
+      "https://github.com/yagop/node-telegram-bot-api.git"
+    ],
+    "awesome_lists": [
+      "https://github.com/szabgab/awesome-for-non-programmers.git",
+      "https://github.com/anderspitman/awesome-tunneling.git",
+      "https://github.com/jlevy/the-art-of-command-line.git",
+      "https://github.com/public-apis/public-apis.git",
+      "https://github.com/EbookFoundation/free-programming-books.git",
+      "https://github.com/codecrafters-io/build-your-own-x.git",
+      "https://github.com/practical-tutorials/project-based-learning.git",
+      "https://github.com/cloudcommunity/Free-Certifications.git",
+      "https://github.com/serhii-londar/open-source-mac-os-apps.git",
+      "https://github.com/dkhamsing/open-source-ios-apps.git",
+      "https://github.com/MunGell/awesome-for-beginners.git",
+      "https://github.com/DopplerHQ/awesome-interview-questions.git",
+      "https://github.com/jaywcjlove/awesome-mac.git",
+      "https://github.com/Hack-with-Github/Awesome-Hacking.git",
+      "https://github.com/avelino/awesome-go.git",
+      "https://github.com/ripienaar/free-for-dev.git",
+      "https://github.com/PatrickJS/awesome-cursorrules.git",
+      "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git"
+    ],
+    "utilities_and_tools": [
+      "https://github.com/libsdl-org/SDL.git",
+      "https://github.com/dtyq/magic.git",
+      "https://github.com/microsoft/poml.git",
+      "https://github.com/microsoft/markitdown.git",
+      "https://github.com/sharkdp/pastel.git",
+      "https://github.com/rsalmei/alive-progress.git",
+      "https://github.com/ahmedkhaleel2004/gitdiagram.git",
+      "https://github.com/th-ch/youtube-music.git",
+      "https://github.com/cursor-free-vip/cursor-free-vip.git",
+      "https://github.com/altstoreio/AltStore.git",
+      "https://github.com/RSSNext/Folo.git",
+      "https://github.com/florinpop17/app-ideas.git",
+      "https://github.com/gitroomhq/postiz-app.git",
+      "https://github.com/smithery-ai/sdk.git",
+      "https://github.com/DataExpert-io/data-engineer-handbook.git",
+      "https://github.com/szr2001/WorkLifeBalance.git",
+      "https://github.com/azat-io/todoctor.git",
+      "https://github.com/bgstaal/multipleWindow3dScene.git",
+      "https://github.com/0xk1h0/ChatGPT_DAN.git",
+      "https://github.com/patchy631/ai-engineering-hub.git",
+      "https://github.com/Leezekun/MassGen.git",
+      "https://github.com/blok/blok.git"
     ]
   }
 }

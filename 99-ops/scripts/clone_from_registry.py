@@ -42,6 +42,16 @@ def get_target_directory(category: str) -> str:
         'autonomous_agents': '45-agent-frameworks/external', 
         'runtimes_and_inference': '30-models/external',
         'apps_and_uix': '50-apps/external',
+        'ai_tools_and_prompts': '90-knowledge-bases/external',
+        'web_scraping_and_crawling': '55-automation/external',
+        'automation_and_workflows': '55-automation/external',
+        'development_tools': '50-apps/external',
+        'trading_and_finance': '70-commerce-finance/external',
+        'ui_frameworks': '50-apps/external',
+        'selfhosted_and_devops': '10-infra/external',
+        'notifications_and_communication': '55-automation/external',
+        'awesome_lists': '90-knowledge-bases/external',
+        'utilities_and_tools': '95-playgrounds/external',
         'knowledge': '90-knowledge-bases/external',
         'infrastructure': '10-infra/external'
     }
