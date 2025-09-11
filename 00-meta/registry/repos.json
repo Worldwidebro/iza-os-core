@@ -106,7 +106,8 @@
       "https://github.com/lvgl/lvgl.git",
       "https://github.com/bytedance/UI-TARS-desktop.git",
       "https://github.com/enaqx/awesome-react.git",
-      "https://github.com/sveltejs/svelte.git"
+      "https://github.com/sveltejs/svelte.git",
+      "https://github.com/Jpisnice/shadcn-ui.git"
     ],
     "selfhosted_and_devops": [
       "https://github.com/awesome-selfhosted/awesome-selfhosted.git",
