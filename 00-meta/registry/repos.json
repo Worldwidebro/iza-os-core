@@ -1,0 +1,82 @@
+{
+  "repositories": [
+    {
+      "name": "fastmcp",
+      "url": "https://github.com/jlowin/fastmcp",
+      "category": "mcp-servers",
+      "description": "FastMCP - Fast Model Context Protocol server framework"
+    },
+    {
+      "name": "mcp-go",
+      "url": "https://github.com/modelcontextprotocol/go",
+      "category": "mcp-servers", 
+      "description": "MCP Go implementation"
+    },
+    {
+      "name": "git-mcp",
+      "url": "https://github.com/modelcontextprotocol/git-mcp",
+      "category": "mcp-servers",
+      "description": "Git MCP server for repository operations"
+    },
+    {
+      "name": "autogen",
+      "url": "https://github.com/microsoft/autogen",
+      "category": "agent-frameworks",
+      "description": "Microsoft AutoGen multi-agent framework"
+    },
+    {
+      "name": "voltagent",
+      "url": "https://github.com/VoltAgent/VoltAgent",
+      "category": "agent-frameworks",
+      "description": "VoltAgent autonomous agent framework"
+    },
+    {
+      "name": "seal",
+      "url": "https://github.com/Seal-AI/SEAL",
+      "category": "agent-frameworks",
+      "description": "SEAL AI agent framework"
+    },
+    {
+      "name": "bmad",
+      "url": "https://github.com/BMAD-Framework/BMAD",
+      "category": "agent-frameworks",
+      "description": "Business Model Automated Deployment framework"
+    },
+    {
+      "name": "lobe-chat",
+      "url": "https://github.com/lobehub/lobe-chat",
+      "category": "apps",
+      "description": "Lobe Chat AI assistant interface"
+    },
+    {
+      "name": "open-lovable",
+      "url": "https://github.com/OpenLovable/OpenLovable",
+      "category": "apps",
+      "description": "Open Lovable website factory"
+    },
+    {
+      "name": "nanobrowser",
+      "url": "https://github.com/nanobrowser/nanobrowser",
+      "category": "apps",
+      "description": "Nanobrowser lightweight browser"
+    },
+    {
+      "name": "vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "category": "models",
+      "description": "vLLM high-performance LLM serving"
+    },
+    {
+      "name": "llama-cpp",
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "category": "models",
+      "description": "llama.cpp inference engine"
+    },
+    {
+      "name": "gpt4all",
+      "url": "https://github.com/nomic-ai/gpt4all",
+      "category": "models",
+      "description": "GPT4All local LLM ecosystem"
+    }
+  ]
+}

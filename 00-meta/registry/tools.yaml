@@ -1,0 +1,45 @@
+# IZA OS Tools Registry
+
+## MCP Servers
+- fastmcp: Fast Model Context Protocol server framework
+- mcp-go: Go implementation of MCP
+- git-mcp: Git operations via MCP
+- filesystem-mcp: File system operations
+- database-mcp: Database operations
+- api-mcp: REST API operations
+
+## Agent Frameworks
+- autogen: Microsoft AutoGen multi-agent framework
+- voltagent: VoltAgent autonomous agent framework
+- seal: SEAL AI agent framework
+- bmad: Business Model Automated Deployment
+- crewai: CrewAI multi-agent orchestration
+- langchain: LangChain framework
+
+## Applications
+- lobe-chat: AI chat interface
+- open-lovable: Website factory
+- nanobrowser: Lightweight browser
+- dify: AI workflow platform
+- n8n: Workflow automation
+
+## Models & Inference
+- vllm: High-performance LLM serving
+- llama-cpp: C++ inference engine
+- gpt4all: Local LLM ecosystem
+- transformers: Hugging Face transformers
+- onnxruntime: ONNX model runtime
+
+## Knowledge & Data
+- chromadb: Vector database
+- qdrant: Vector search engine
+- neo4j: Graph database
+- mem0: Memory management
+- graphitti: Knowledge graph tools
+
+## Infrastructure
+- terraform: Infrastructure as code
+- kubernetes: Container orchestration
+- docker: Containerization
+- prometheus: Monitoring
+- grafana: Visualization
