@@ -1,0 +1,40 @@
+models:
+  claude:
+    api_key: ${ANTHROPIC_API_KEY}
+    default_model: "claude-3-sonnet-20240229"
+    timeout: 30
+    max_retries: 3
+    max_tokens: 4096
+  
+  openai:
+    api_key: ${OPENAI_API_KEY}
+    default_model: "gpt-4-turbo-preview"
+    timeout: 30
+    max_retries: 3
+    max_tokens: 4096
+
+  huggingface:
+    api_key: ${HUGGINGFACE_API_KEY}
+    default_model: "mistralai/Mistral-7B-Instruct-v0.2"
+    timeout: 60
+
+rate_limiting:
+  requests_per_minute: 50
+  burst_capacity: 10
+  retry_after_seconds: 60
+
+caching:
+  enabled: true
+  ttl_minutes: 60
+  max_size_mb: 1000
+  strategy: "lru"
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/llm_requests.log"
+
+monitoring:
+  enabled: true
+  prometheus_port: 9090
+  metrics_prefix: "iza_os_llm"

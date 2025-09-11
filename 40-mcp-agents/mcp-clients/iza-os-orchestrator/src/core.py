@@ -9,6 +9,18 @@ import json
 import logging
 from typing import Dict, List, Optional
 from pathlib import Path
+import sys
+import os
+
+# Add the models directory to the path
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../../..'))
+
+from models.llm_manager import LLMManager, LLMRequest
+from observability.metrics.metrics_collector import IZAOSMetrics
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -23,10 +35,20 @@ class IZAOSOrchestrator:
         self.tools = {}
         self.knowledge_base = None
         self.status = "initializing"
+        self.llm_manager = None
+        self.metrics = None
         
     async def initialize(self):
         """Initialize the orchestrator and all components"""
         logger.info("🚀 Initializing IZA OS Orchestrator...")
+        
+        # Initialize metrics
+        self.metrics = IZAOSMetrics(port=9090)
+        self.metrics.start_server()
+        
+        # Initialize LLM manager
+        self.llm_manager = LLMManager()
+        await self.llm_manager.initialize()
         
         # Load configuration
         await self.load_config()
@@ -142,16 +164,68 @@ class IZAOSOrchestrator:
             
     async def _execute_with_agent(self, task: str, agent: str) -> Dict:
         """Execute task with specific agent"""
-        # Simulate task execution
-        await asyncio.sleep(0.1)  # Simulate processing time
+        start_time = asyncio.get_event_loop().time()
         
-        return {
-            "task": task,
-            "agent": agent,
-            "status": "completed",
-            "result": f"Task '{task}' completed by {agent}",
-            "timestamp": asyncio.get_event_loop().time()
-        }
+        try:
+            # Use LLM to generate response
+            if self.llm_manager:
+                llm_request = LLMRequest(
+                    model="claude-3-sonnet-20240229",
+                    prompt=f"Agent {agent}, please execute this task: {task}",
+                    max_tokens=500
+                )
+                
+                response = await self.llm_manager.generate(llm_request)
+                
+                # Record metrics
+                if self.metrics:
+                    self.metrics.record_agent_task(
+                        agent_name=agent,
+                        task_type="llm_task",
+                        duration=asyncio.get_event_loop().time() - start_time,
+                        status="success"
+                    )
+                
+                return {
+                    "task": task,
+                    "agent": agent,
+                    "status": "completed",
+                    "result": response.content,
+                    "tokens_used": response.tokens_used,
+                    "response_time": response.response_time,
+                    "cached": response.cached,
+                    "timestamp": asyncio.get_event_loop().time()
+                }
+            else:
+                # Fallback to simple execution
+                await asyncio.sleep(0.1)
+                return {
+                    "task": task,
+                    "agent": agent,
+                    "status": "completed",
+                    "result": f"Task '{task}' completed by {agent}",
+                    "timestamp": asyncio.get_event_loop().time()
+                }
+                
+        except Exception as e:
+            logger.error(f"Error executing task with {agent}: {e}")
+            
+            # Record error metrics
+            if self.metrics:
+                self.metrics.record_agent_task(
+                    agent_name=agent,
+                    task_type="llm_task",
+                    duration=asyncio.get_event_loop().time() - start_time,
+                    status="error"
+                )
+            
+            return {
+                "task": task,
+                "agent": agent,
+                "status": "error",
+                "result": f"Error: {str(e)}",
+                "timestamp": asyncio.get_event_loop().time()
+            }
         
     def get_status(self) -> Dict:
         """Get orchestrator status"""

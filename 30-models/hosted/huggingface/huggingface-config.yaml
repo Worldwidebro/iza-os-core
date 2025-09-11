@@ -1,0 +1,28 @@
+models:
+  huggingface:
+    api_key: ${HUGGINGFACE_API_KEY}
+    default_model: "mistralai/Mistral-7B-Instruct-v0.2"
+    timeout: 60
+    max_retries: 3
+    max_tokens: 2048
+
+rate_limiting:
+  requests_per_minute: 30
+  burst_capacity: 5
+  retry_after_seconds: 120
+
+caching:
+  enabled: true
+  ttl_minutes: 120
+  max_size_mb: 2000
+  strategy: "lru"
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/huggingface_requests.log"
+
+monitoring:
+  enabled: true
+  prometheus_port: 9092
+  metrics_prefix: "iza_os_huggingface"

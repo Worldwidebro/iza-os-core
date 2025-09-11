@@ -1,0 +1,28 @@
+models:
+  openai:
+    api_key: ${OPENAI_API_KEY}
+    default_model: "gpt-4-turbo-preview"
+    timeout: 30
+    max_retries: 3
+    max_tokens: 4096
+
+rate_limiting:
+  requests_per_minute: 50
+  burst_capacity: 10
+  retry_after_seconds: 60
+
+caching:
+  enabled: true
+  ttl_minutes: 60
+  max_size_mb: 1000
+  strategy: "lru"
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/openai_requests.log"
+
+monitoring:
+  enabled: true
+  prometheus_port: 9091
+  metrics_prefix: "iza_os_openai"
