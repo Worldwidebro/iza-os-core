@@ -15,15 +15,33 @@ def load_repos_config(config_path: str) -> List[Dict]:
     """Load repository configuration from JSON file"""
     with open(config_path, 'r') as f:
         config = json.load(f)
-    return config.get('repositories', [])
+    
+    repositories = []
+    repos_data = config.get('repositories', {})
+    
+    # Convert the new structure to the old format for compatibility
+    for category, repo_urls in repos_data.items():
+        for url in repo_urls:
+            # Extract repo name from URL
+            repo_name = url.split('/')[-1].replace('.git', '')
+            
+            repositories.append({
+                'name': repo_name,
+                'url': url,
+                'category': category,
+                'description': f"{repo_name} - {category.replace('_', ' ').title()}"
+            })
+    
+    return repositories
 
 def get_target_directory(category: str) -> str:
     """Map repository category to target directory"""
     category_mapping = {
-        'mcp-servers': '40-mcp-agents/external',
-        'agent-frameworks': '45-agent-frameworks/external', 
-        'apps': '50-apps/external',
-        'models': '30-models/external',
+        'mcp': '40-mcp-agents/external',
+        'claude_and_cookbooks': '40-mcp-agents/external',
+        'autonomous_agents': '45-agent-frameworks/external', 
+        'runtimes_and_inference': '30-models/external',
+        'apps_and_uix': '50-apps/external',
         'knowledge': '90-knowledge-bases/external',
         'infrastructure': '10-infra/external'
     }
