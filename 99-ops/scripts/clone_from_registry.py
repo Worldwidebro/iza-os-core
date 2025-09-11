@@ -52,6 +52,7 @@ def get_target_directory(category: str) -> str:
         'notifications_and_communication': '55-automation/external',
         'awesome_lists': '90-knowledge-bases/external',
         'utilities_and_tools': '95-playgrounds/external',
+        'external_services': '95-playgrounds/external',
         'knowledge': '90-knowledge-bases/external',
         'infrastructure': '10-infra/external'
     }

@@ -9,7 +9,9 @@
       "https://github.com/toolsdk-ai/awesome-mcp-registry.git",
       "https://github.com/idosal/git-mcp.git",
       "https://github.com/tadata-org/fastapi_mcp.git",
-      "https://github.com/docker/mcp-registry.git"
+      "https://github.com/docker/mcp-registry.git",
+      "https://github.com/punkpeye/awesome-mcp-servers.git",
+      "https://github.com/BrowserMCP/mcp.git"
     ],
     "claude_and_cookbooks": [
       "https://github.com/anthropics/claude-code-action.git",
@@ -18,7 +20,8 @@
       "https://github.com/SuperClaude-Org/SuperClaude_Framework.git",
       "https://github.com/getAsterisk/claudia.git",
       "https://github.com/ruvnet/claude-flow.git",
-      "https://github.com/opactorai/Claudable.git"
+      "https://github.com/opactorai/Claudable.git",
+      "https://github.com/smtg-ai/claude-squad.git"
     ],
     "autonomous_agents": [
       "https://github.com/microsoft/autogen.git",
@@ -31,7 +34,8 @@
       "https://github.com/gyoridavid/ai_agents_az.git",
       "https://github.com/microsoft/ai-agents-for-beginners.git",
       "https://github.com/bmad-code-org/BMAD-METHOD.git",
-      "https://github.com/All-Hands-AI/OpenHands.git"
+      "https://github.com/All-Hands-AI/OpenHands.git",
+      "https://github.com/Aider-AI/aider.git"
     ],
     "runtimes_and_inference": [
       "https://github.com/vllm-project/vllm.git",
@@ -53,7 +57,9 @@
       "https://github.com/langgenius/dify.git",
       "https://github.com/Canner/WrenAI.git",
       "https://github.com/labring/FastGPT.git",
-      "https://github.com/sheshbabu/zen.git"
+      "https://github.com/sheshbabu/zen.git",
+      "https://github.com/Budibase/budibase.git",
+      "https://github.com/nextjs/saas-starter.git"
     ],
     "ai_tools_and_prompts": [
       "https://github.com/promptslab/prompt-optimizer.git",
@@ -87,7 +93,9 @@
       "https://github.com/tailwindlabs/tailwindcss.git",
       "https://github.com/storybookjs/storybook.git",
       "https://github.com/gothinkster/realworld.git",
-      "https://github.com/modern-backend-framework/modern-backend-framework.git"
+      "https://github.com/modern-backend-framework/modern-backend-framework.git",
+      "https://github.com/superdesigndev/superdesign.git",
+      "https://github.com/telegraf/telegraf.git"
     ],
     "trading_and_finance": [
       "https://github.com/nautechsystems/nautilus_trader.git",
@@ -159,6 +167,15 @@
       "https://github.com/patchy631/ai-engineering-hub.git",
       "https://github.com/Leezekun/MassGen.git",
       "https://github.com/blok/blok.git"
+    ],
+    "external_services": [
+      "https://gittodoc.com/",
+      "https://www.superdesign.dev/",
+      "https://coolors.co/",
+      "https://sarthology.github.io/Animatopy/",
+      "https://github.com/Jpisnice/shadcn-ui.git",
+      "https://tweakcn.com/",
+      "https://tmuxai.dev/"
     ]
   }
 }

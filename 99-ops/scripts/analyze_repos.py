@@ -45,16 +45,18 @@ def analyze_repositories():
     print("-" * 20)
     
     capabilities = {
-        "MCP Servers": ["fastmcp", "mcp-go", "git-mcp", "fastapi_mcp"],
-        "AI Agents": ["autogen", "voltagent", "suna", "SEAL", "BMAD"],
+        "MCP Servers": ["fastmcp", "mcp-go", "git-mcp", "fastapi_mcp", "awesome-mcp-servers", "BrowserMCP"],
+        "AI Agents": ["autogen", "voltagent", "suna", "SEAL", "BMAD", "aider", "claude-squad"],
         "LLM Inference": ["vllm", "llama.cpp", "gpt4all", "unsloth"],
         "Workflow Automation": ["n8n", "activepieces", "sim"],
         "Web Scraping": ["firecrawl", "crawlee", "stagehand"],
-        "Development": ["vite", "drizzle-orm", "tailwindcss", "storybook"],
+        "Development": ["vite", "drizzle-orm", "tailwindcss", "storybook", "superdesign", "telegraf"],
+        "SaaS Applications": ["budibase", "nextjs-saas-starter"],
         "Trading": ["nautilus_trader", "OpenBB"],
         "UI Frameworks": ["lvgl", "UI-TARS", "awesome-react", "svelte"],
         "Self-Hosted": ["awesome-selfhosted", "syncthing", "puter"],
-        "Awesome Lists": ["awesome-for-beginners", "public-apis", "free-programming-books"]
+        "Awesome Lists": ["awesome-for-beginners", "public-apis", "free-programming-books"],
+        "External Services": ["gittodoc", "superdesign", "coolors", "tmuxai", "shadcn-ui"]
     }
     
     for capability, repos in capabilities.items():
@@ -70,7 +72,12 @@ def analyze_repositories():
         "once-ui.com - UI components",
         "viewerkit.com - Viewer tools",
         "mgx.dev - Development tools",
-        "huggingface.co/spaces/smolagents/computer-agent - Computer agent"
+        "huggingface.co/spaces/smolagents/computer-agent - Computer agent",
+        "gittodoc.com - Git to documentation",
+        "superdesign.dev - Design system",
+        "coolors.co - Color palette generator",
+        "tmuxai.dev - TMUX AI integration",
+        "tweakcn.com - Shadcn UI tweaks"
     ]
     
     for resource in resources:
