@@ -27,9 +27,9 @@ help:
 setup:
 	@echo "🚀 Setting up IZA OS..."
 	@pip install -r requirements.txt
-	@pip install -e 40-mcp-agents/mcp-clients/iza-os-orchestrator/
-	@pip install -e 40-mcp-agents/mcp-servers/iza-os-agents/
-	@pip install -e 40-mcp-agents/mcp-servers/iza-os-tools/
+	@if [ -d 40-mcp-agents/mcp-clients/iza-os-orchestrator ]; then pip install -e 40-mcp-agents/mcp-clients/iza-os-orchestrator/; else echo "(skip) orchestrator package not present"; fi
+	@if [ -d 40-mcp-agents/mcp-servers/iza-os-agents ]; then pip install -e 40-mcp-agents/mcp-servers/iza-os-agents/; else echo "(skip) iza-os-agents not present"; fi
+	@if [ -d 40-mcp-agents/mcp-servers/iza-os-tools ]; then pip install -e 40-mcp-agents/mcp-servers/iza-os-tools/; else echo "(skip) iza-os-tools not present"; fi
 	@mkdir -p logs config data
 	@echo "✅ Setup complete"
 
@@ -68,8 +68,8 @@ start-dashboard:
 # Start MCP servers
 start-mcp-servers:
 	@echo "🔌 Starting MCP servers..."
-	@cd 40-mcp-agents/mcp-servers/llm-core && fastmcp run src.llm.claude_client:app &
-	@cd 40-mcp-agents/mcp-servers/iza-os-tools && fastmcp run src.mcp.github_server:app &
+	@if [ -d 40-mcp-agents/mcp-servers/llm-core ]; then cd 40-mcp-agents/mcp-servers/llm-core && fastmcp run src.llm.claude_client:app & else echo "(skip) llm-core not present"; fi
+	@if [ -d 40-mcp-agents/mcp-servers/iza-os-tools ]; then cd 40-mcp-agents/mcp-servers/iza-os-tools && fastmcp run src.mcp.github_server:app & else echo "(skip) iza-os-tools not present"; fi
 
 # Start all services
 start-all: start-orchestrator start-dashboard start-mcp-servers

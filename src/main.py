@@ -32,8 +32,15 @@ from src.utils.config import load_config
 # Set up logging
 logger = setup_logger(__name__)
 
-# Global app instance
-app: Optional[FastAPI] = None
+# Global app instance (must be defined before using route decorators)
+app: FastAPI = FastAPI(
+    title="IZA OS",
+    description="Intelligent Zero-Administration Operating System - Your AI CEO",
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
+)
 iza_system: Optional["IZASystem"] = None
 
 
@@ -178,23 +185,12 @@ class IZASystem:
         
         return status
 
-
-def create_app(config: dict) -> FastAPI:
-    """Create and configure the FastAPI application"""
-    
-    app = FastAPI(
-        title="IZA OS",
-        description="Intelligent Zero-Administration Operating System - Your AI CEO",
-        version="1.0.0",
-        docs_url="/docs",
-        redoc_url="/redoc",
-        openapi_url="/openapi.json"
-    )
-    
+def configure_app(config: dict) -> None:
+    """Configure the global FastAPI app with middleware based on config"""
     # Add middleware
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=config.get('cors', {}).get('origins', ["*"]),
+        allow_origins=config.get('security', {}).get('cors_origins', ["*"]),
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -204,8 +200,6 @@ def create_app(config: dict) -> FastAPI:
         TrustedHostMiddleware,
         allowed_hosts=config.get('security', {}).get('allowed_hosts', ["*"])
     )
-    
-    return app
 
 
 # FastAPI route handlers
@@ -331,8 +325,8 @@ async def main():
     # Initialize IZA OS system
     iza_system = IZASystem(config)
     
-    # Create FastAPI app
-    app = create_app(config)
+    # Configure FastAPI app
+    configure_app(config)
     
     # Set up signal handlers
     setup_signal_handlers()
