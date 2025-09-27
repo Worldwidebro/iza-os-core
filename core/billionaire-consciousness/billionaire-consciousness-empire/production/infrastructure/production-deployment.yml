@@ -1,0 +1,145 @@
+# Billionaire Consciousness Empire - Production Deployment
+version: '3.8'
+
+services:
+  # Core IZA OS Services
+  iza-os-api-gateway:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./configs/nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  iza-os-backend:
+    build: ./core/iza-os/backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=${DATABASE_URL}
+      - REDIS_URL=${REDIS_URL}
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  iza-os-frontend:
+    build: ./core/iza-os/frontend
+    ports:
+      - "3004:3000"
+    environment:
+      - REACT_APP_API_URL=http://iza-os-api-gateway:80
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  # Consciousness-OS Services
+  consciousness-os-api:
+    build: ./core/consciousness-os/api
+    ports:
+      - "8081:8080"
+    environment:
+      - CONSCIOUSNESS_LEVEL=billionaire_thinking
+      - AI_MODELS_URL=http://ollama:11434
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  consciousness-os-dashboard:
+    build: ./core/consciousness-os/dashboard
+    ports:
+      - "3005:3000"
+    environment:
+      - CONSCIOUSNESS_API_URL=http://consciousness-os-api:8080
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  # Genix Bank Services
+  genix-bank-api:
+    build: ./financial/genix-bank/backend
+    ports:
+      - "8086:8080"
+    environment:
+      - GENIX_BANK_MODE=production
+      - TREASURY_AI_URL=http://consciousness-os-api:8080
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  genix-bank-dashboard:
+    build: ./financial/genix-bank/frontend
+    ports:
+      - "3007:3000"
+    environment:
+      - GENIX_API_URL=http://genix-bank-api:8080
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  # AI Models and Services
+  ollama-ai:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  # Database Services
+  postgresql:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=billionaire_empire
+      - POSTGRES_USER=empire_user
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    volumes:
+      - redis_data:/data
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  # Monitoring and Analytics
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - billionaire-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  ollama_data:
+  grafana_data:
+
+networks:
+  billionaire-network:
+    driver: bridge

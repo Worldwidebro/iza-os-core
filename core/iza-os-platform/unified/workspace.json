@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "projects": {
+    "dashboard": "apps/dashboard",
+    "api": "apps/api",
+    "docs": "apps/docs",
+    "mobile": "apps/mobile",
+    "shared": "packages/shared",
+    "ui": "packages/ui",
+    "agents": "packages/agents",
+    "integrations": "packages/integrations"
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    }
+  }
+}

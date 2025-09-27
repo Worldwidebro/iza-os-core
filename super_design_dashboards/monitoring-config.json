@@ -1,0 +1,462 @@
+{
+  "monitoring": {
+    "performance": {
+      "enabled": true,
+      "metrics": {
+        "page_load_time": {
+          "enabled": true,
+          "threshold": 3000,
+          "alert_level": "warning"
+        },
+        "first_contentful_paint": {
+          "enabled": true,
+          "threshold": 1500,
+          "alert_level": "warning"
+        },
+        "largest_contentful_paint": {
+          "enabled": true,
+          "threshold": 2500,
+          "alert_level": "error"
+        },
+        "cumulative_layout_shift": {
+          "enabled": true,
+          "threshold": 0.1,
+          "alert_level": "warning"
+        },
+        "first_input_delay": {
+          "enabled": true,
+          "threshold": 100,
+          "alert_level": "warning"
+        },
+        "dom_size": {
+          "enabled": true,
+          "threshold": 1500,
+          "alert_level": "warning"
+        },
+        "memory_usage": {
+          "enabled": true,
+          "threshold": 80,
+          "alert_level": "error",
+          "unit": "percentage"
+        }
+      },
+      "collection_interval": 30,
+      "retention_days": 30
+    },
+    "errors": {
+      "enabled": true,
+      "tracking": {
+        "javascript_errors": {
+          "enabled": true,
+          "capture_stack_trace": true,
+          "group_similar_errors": true
+        },
+        "network_errors": {
+          "enabled": true,
+          "track_failed_requests": true,
+          "track_timeout_errors": true
+        },
+        "validation_errors": {
+          "enabled": true,
+          "track_form_errors": true,
+          "track_api_errors": true
+        }
+      },
+      "alerting": {
+        "error_rate_threshold": 5,
+        "error_rate_window": 300,
+        "notification_channels": ["email", "slack"]
+      }
+    },
+    "security": {
+      "enabled": true,
+      "monitoring": {
+        "failed_auth_attempts": {
+          "enabled": true,
+          "threshold": 10,
+          "window": 300,
+          "alert_level": "critical"
+        },
+        "rate_limit_violations": {
+          "enabled": true,
+          "threshold": 20,
+          "window": 60,
+          "alert_level": "warning"
+        },
+        "xss_attempts": {
+          "enabled": true,
+          "threshold": 1,
+          "window": 60,
+          "alert_level": "critical"
+        },
+        "csrf_attempts": {
+          "enabled": true,
+          "threshold": 5,
+          "window": 300,
+          "alert_level": "warning"
+        },
+        "sql_injection_attempts": {
+          "enabled": true,
+          "threshold": 1,
+          "window": 60,
+          "alert_level": "critical"
+        }
+      }
+    },
+    "health_checks": {
+      "enabled": true,
+      "checks": [
+        {
+          "name": "dashboard_availability",
+          "endpoint": "/dashboard/health",
+          "interval": 30,
+          "timeout": 10,
+          "method": "GET",
+          "expected_status": 200
+        },
+        {
+          "name": "api_health",
+          "endpoint": "/api/health",
+          "interval": 30,
+          "timeout": 5,
+          "method": "GET",
+          "expected_status": 200
+        },
+        {
+          "name": "database_connectivity",
+          "endpoint": "/api/db/health",
+          "interval": 60,
+          "timeout": 5,
+          "method": "GET",
+          "expected_status": 200
+        },
+        {
+          "name": "external_services",
+          "endpoint": "/api/external/health",
+          "interval": 120,
+          "timeout": 10,
+          "method": "GET",
+          "expected_status": 200
+        }
+      ],
+      "alerting": {
+        "failure_threshold": 3,
+        "recovery_threshold": 2,
+        "notification_delay": 60
+      }
+    },
+    "uptime": {
+      "enabled": true,
+      "monitoring_points": [
+        {
+          "name": "primary_dashboard",
+          "url": "http://localhost:3000",
+          "interval": 60,
+          "timeout": 30
+        },
+        {
+          "name": "api_endpoint",
+          "url": "http://localhost:8080/api/health",
+          "interval": 60,
+          "timeout": 10
+        },
+        {
+          "name": "n8n_workflows",
+          "url": "http://localhost:5678",
+          "interval": 120,
+          "timeout": 15
+        }
+      ],
+      "sla_target": 99.9,
+      "alert_on_sla_breach": true
+    }
+  },
+  "alerting": {
+    "channels": {
+      "email": {
+        "enabled": true,
+        "recipients": [
+          "admin@iza-os.com",
+          "devops@iza-os.com"
+        ],
+        "smtp": {
+          "host": "smtp.gmail.com",
+          "port": 587,
+          "secure": false,
+          "auth": {
+            "user": "alerts@iza-os.com",
+            "pass": "CHANGE_THIS_PASSWORD"
+          }
+        }
+      },
+      "slack": {
+        "enabled": true,
+        "webhook_url": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK",
+        "channel": "#iza-os-alerts",
+        "username": "IZA-OS-Monitor",
+        "icon_emoji": ":warning:"
+      },
+      "webhook": {
+        "enabled": false,
+        "url": "https://your-webhook-endpoint.com/alerts",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer YOUR_TOKEN"
+        }
+      }
+    },
+    "rules": [
+      {
+        "name": "high_error_rate",
+        "condition": "error_rate > 5%",
+        "duration": "5m",
+        "severity": "critical",
+        "channels": ["email", "slack"],
+        "message": "High error rate detected: {error_rate}%"
+      },
+      {
+        "name": "slow_response_time",
+        "condition": "avg_response_time > 2000ms",
+        "duration": "3m",
+        "severity": "warning",
+        "channels": ["slack"],
+        "message": "Slow response time detected: {avg_response_time}ms"
+      },
+      {
+        "name": "service_down",
+        "condition": "health_check_failed",
+        "duration": "1m",
+        "severity": "critical",
+        "channels": ["email", "slack", "webhook"],
+        "message": "Service is down: {service_name}"
+      },
+      {
+        "name": "security_threat",
+        "condition": "security_violation",
+        "duration": "0s",
+        "severity": "critical",
+        "channels": ["email", "slack"],
+        "message": "Security threat detected: {threat_type}"
+      },
+      {
+        "name": "resource_exhaustion",
+        "condition": "memory_usage > 90% OR cpu_usage > 90%",
+        "duration": "2m",
+        "severity": "warning",
+        "channels": ["slack"],
+        "message": "High resource usage: Memory {memory_usage}%, CPU {cpu_usage}%"
+      }
+    ]
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "outputs": [
+      {
+        "type": "console",
+        "enabled": true,
+        "level": "INFO"
+      },
+      {
+        "type": "file",
+        "enabled": true,
+        "level": "DEBUG",
+        "path": "/var/log/iza-os/dashboard.log",
+        "rotation": {
+          "enabled": true,
+          "max_size": "100MB",
+          "backup_count": 10,
+          "when": "midnight"
+        }
+      },
+      {
+        "type": "syslog",
+        "enabled": false,
+        "level": "WARNING",
+        "facility": "local0"
+      }
+    ],
+    "structured": true,
+    "include_context": true,
+    "correlation_id": true
+  },
+  "metrics": {
+    "collection": {
+      "enabled": true,
+      "interval": 30,
+      "retention": "90d",
+      "aggregation": {
+        "enabled": true,
+        "intervals": ["1m", "5m", "15m", "1h", "1d"]
+      }
+    },
+    "export": {
+      "prometheus": {
+        "enabled": true,
+        "endpoint": "/metrics",
+        "port": 9090
+      },
+      "graphite": {
+        "enabled": false,
+        "host": "graphite.example.com",
+        "port": 2003,
+        "prefix": "iza_os.dashboard"
+      },
+      "influxdb": {
+        "enabled": false,
+        "url": "http://influxdb.example.com:8086",
+        "database": "iza_os",
+        "username": "monitor",
+        "password": "CHANGE_THIS"
+      }
+    },
+    "custom_metrics": [
+      {
+        "name": "dashboard_views",
+        "type": "counter",
+        "description": "Total dashboard page views"
+      },
+      {
+        "name": "api_requests_total",
+        "type": "counter",
+        "description": "Total API requests",
+        "labels": ["method", "endpoint", "status"]
+      },
+      {
+        "name": "response_time_seconds",
+        "type": "histogram",
+        "description": "API response time in seconds",
+        "labels": ["method", "endpoint"],
+        "buckets": [0.1, 0.5, 1.0, 2.0, 5.0, 10.0]
+      },
+      {
+        "name": "active_users",
+        "type": "gauge",
+        "description": "Number of active users"
+      },
+      {
+        "name": "workflow_executions_total",
+        "type": "counter",
+        "description": "Total N8N workflow executions",
+        "labels": ["workflow_id", "status"]
+      }
+    ]
+  },
+  "dashboards": {
+    "grafana": {
+      "enabled": false,
+      "url": "http://grafana.example.com:3000",
+      "api_key": "CHANGE_THIS_API_KEY",
+      "dashboards": [
+        {
+          "name": "IZA OS Dashboard Overview",
+          "uid": "iza-os-dashboard",
+          "refresh": "30s"
+        },
+        {
+          "name": "Security Monitoring",
+          "uid": "iza-os-security",
+          "refresh": "1m"
+        },
+        {
+          "name": "Performance Metrics",
+          "uid": "iza-os-performance",
+          "refresh": "30s"
+        }
+      ]
+    },
+    "custom_dashboard": {
+      "enabled": true,
+      "endpoint": "/admin/monitoring",
+      "refresh_interval": 30,
+      "charts": [
+        {
+          "type": "line",
+          "title": "Response Time",
+          "metric": "response_time_seconds",
+          "time_range": "1h"
+        },
+        {
+          "type": "bar",
+          "title": "Error Rate",
+          "metric": "error_rate",
+          "time_range": "24h"
+        },
+        {
+          "type": "gauge",
+          "title": "Active Users",
+          "metric": "active_users",
+          "refresh": "10s"
+        },
+        {
+          "type": "table",
+          "title": "Top Endpoints",
+          "metric": "api_requests_total",
+          "group_by": "endpoint",
+          "limit": 10
+        }
+      ]
+    }
+  },
+  "automation": {
+    "auto_scaling": {
+      "enabled": false,
+      "triggers": [
+        {
+          "metric": "cpu_usage",
+          "threshold": 80,
+          "action": "scale_up",
+          "cooldown": 300
+        },
+        {
+          "metric": "cpu_usage",
+          "threshold": 20,
+          "action": "scale_down",
+          "cooldown": 600
+        }
+      ]
+    },
+    "auto_remediation": {
+      "enabled": true,
+      "actions": [
+        {
+          "trigger": "high_error_rate",
+          "action": "restart_service",
+          "delay": 120,
+          "max_attempts": 3
+        },
+        {
+          "trigger": "memory_leak_detected",
+          "action": "restart_application",
+          "delay": 60,
+          "max_attempts": 2
+        },
+        {
+          "trigger": "disk_space_low",
+          "action": "cleanup_logs",
+          "delay": 30,
+          "max_attempts": 1
+        }
+      ]
+    }
+  },
+  "compliance": {
+    "gdpr": {
+      "enabled": true,
+      "data_retention_days": 365,
+      "anonymize_logs": true,
+      "audit_logging": true
+    },
+    "sox": {
+      "enabled": false,
+      "audit_trail": true,
+      "change_management": true
+    },
+    "pci_dss": {
+      "enabled": false,
+      "secure_logging": true,
+      "access_control": true
+    }
+  }
+}

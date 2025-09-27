@@ -1,0 +1,431 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "IZA OS memU Repository",
+  "description": "Autonomous venture studio ecosystem with glass-morphism UI and AI agent integration",
+  "url": "https://iza-os.com/memu",
+  "applicationCategory": "WebApplication",
+  "hasPart": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/__init___py",
+      "name": "__init__.py",
+      "description": "python_module component in core category",
+      "url": "https://iza-os.com/memu/__init__.py",
+      "fileFormat": ".py",
+      "dateModified": "2025-09-19T14:29:49.381200",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Core System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/complete_n8n_workflow_integration_py",
+      "name": "complete_n8n_workflow_integration.py",
+      "description": "integration component in integrations category",
+      "url": "https://iza-os.com/memu/complete_n8n_workflow_integration.py",
+      "fileFormat": ".py",
+      "dateModified": "2025-09-19T06:07:32.001821",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Integrations System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_integrate-search_js",
+      "name": "integrate-search.js",
+      "description": "javascript component in assets category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/integrate-search.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T13:03:22.789941",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Assets System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_modern-search-implementation_js",
+      "name": "modern-search-implementation.js",
+      "description": "javascript component in assets category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/modern-search-implementation.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T13:03:20.846892",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Assets System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_validate-dashboard_py",
+      "name": "validate-dashboard.py",
+      "description": "dashboard component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/validate-dashboard.py",
+      "fileFormat": ".py",
+      "dateModified": "2025-09-19T13:09:16.274461",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_automation-bot-integration_js",
+      "name": "automation-bot-integration.js",
+      "description": "integration component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/automation-bot-integration.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T14:03:09.881853",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_dashboard-monitoring-integration_js",
+      "name": "dashboard-monitoring-integration.js",
+      "description": "dashboard component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/dashboard-monitoring-integration.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T13:55:37.635931",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_content-discovery-integration_js",
+      "name": "content-discovery-integration.js",
+      "description": "integration component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/content-discovery-integration.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T13:57:39.568492",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_dashboard-styles_css",
+      "name": "dashboard-styles.css",
+      "description": "dashboard component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/dashboard-styles.css",
+      "fileFormat": ".css",
+      "dateModified": "2025-09-19T06:08:53.184092",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_dashboard-data_json",
+      "name": "dashboard-data.json",
+      "description": "dashboard component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/dashboard-data.json",
+      "fileFormat": ".json",
+      "dateModified": "2025-09-19T00:04:33.261192",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_dashboard-script_js",
+      "name": "dashboard-script.js",
+      "description": "dashboard component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/dashboard-script.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T06:04:29.275009",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_security-compliance-integration_js",
+      "name": "security-compliance-integration.js",
+      "description": "integration component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/security-compliance-integration.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T14:04:16.184261",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_ecosystem-health-monitoring_js",
+      "name": "ecosystem-health-monitoring.js",
+      "description": "javascript component in assets category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/ecosystem-health-monitoring.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T14:04:16.160603",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Assets System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards___init___py",
+      "name": "__init__.py",
+      "description": "python_module component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/__init__.py",
+      "fileFormat": ".py",
+      "dateModified": "2025-09-19T05:19:27.555133",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_nlp-processing-integration_js",
+      "name": "nlp-processing-integration.js",
+      "description": "integration component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/nlp-processing-integration.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T13:55:42.173380",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_search-intelligence-integration_js",
+      "name": "search-intelligence-integration.js",
+      "description": "integration component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/search-intelligence-integration.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T13:53:15.419176",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_bot-communication-protocol_js",
+      "name": "bot-communication-protocol.js",
+      "description": "javascript component in assets category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/bot-communication-protocol.js",
+      "fileFormat": ".js",
+      "dateModified": "2025-09-19T14:00:03.031781",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Assets System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_iza_os_main_dashboard_html",
+      "name": "iza_os_main_dashboard.html",
+      "description": "dashboard component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/iza_os_main_dashboard.html",
+      "fileFormat": ".html",
+      "dateModified": "2025-09-19T14:29:47.906172",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_App_tsx",
+      "name": "App.tsx",
+      "description": "javascript component in assets category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/App.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:29:53.221590",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Assets System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_main_tsx",
+      "name": "main.tsx",
+      "description": "javascript component in assets category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/main.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:29:51.876945",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Assets System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_test_setup_ts",
+      "name": "setup.ts",
+      "description": "javascript component in assets category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/test/setup.ts",
+      "fileFormat": ".ts",
+      "dateModified": "2025-09-19T14:35:48.662108",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Assets System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_utils_performance_tsx",
+      "name": "performance.tsx",
+      "description": "javascript component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/utils/performance.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:36:04.477966",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_utils_security_tsx",
+      "name": "security.tsx",
+      "description": "javascript component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/utils/security.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:36:02.679156",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_StatsGrid_tsx",
+      "name": "StatsGrid.tsx",
+      "description": "javascript component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/StatsGrid.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:31:30.363439",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_Confetti_tsx",
+      "name": "Confetti.tsx",
+      "description": "javascript component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/Confetti.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:33:54.621303",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_AgentCard_tsx",
+      "name": "AgentCard.tsx",
+      "description": "javascript component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/AgentCard.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:31:28.448447",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_Footer_tsx",
+      "name": "Footer.tsx",
+      "description": "javascript component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/Footer.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:33:51.793117",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_AgentDashboard_tsx",
+      "name": "AgentDashboard.tsx",
+      "description": "dashboard component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/AgentDashboard.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:31:26.941055",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_Header_tsx",
+      "name": "Header.tsx",
+      "description": "javascript component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/Header.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:33:26.023194",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_AgentFlow_tsx",
+      "name": "AgentFlow.tsx",
+      "description": "javascript component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/AgentFlow.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:33:57.022252",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_components_ui_LoadingSpinner_tsx",
+      "name": "LoadingSpinner.tsx",
+      "description": "javascript component in components category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/components/ui/LoadingSpinner.tsx",
+      "fileFormat": ".tsx",
+      "dateModified": "2025-09-19T14:33:55.845744",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Components System"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://iza-os.com/memu/super_design_dashboards_src_hooks_useAgentSystem_ts",
+      "name": "useAgentSystem.ts",
+      "description": "javascript component in dashboard category",
+      "url": "https://iza-os.com/memu/super_design_dashboards/src/hooks/useAgentSystem.ts",
+      "fileFormat": ".ts",
+      "dateModified": "2025-09-19T14:31:32.060787",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "IZA OS Dashboard System"
+      }
+    }
+  ],
+  "member": [],
+  "maintainer": {
+    "@type": "SoftwareAgent",
+    "name": "IZA OS Maintenance Agent"
+  }
+}

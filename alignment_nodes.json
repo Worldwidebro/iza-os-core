@@ -1,0 +1,1125 @@
+{
+  "test_integration_complete_py": {
+    "id": "test_integration_complete_py",
+    "name": "test_integration_complete.py",
+    "path": "test_integration_complete.py",
+    "category": "integrations",
+    "type": "test",
+    "schema_type": "CreativeWork",
+    "dependencies": [
+      "asyncio",
+      "json",
+      "logging",
+      "os",
+      "sys",
+      "time",
+      "unittest",
+      "datetime",
+      "pathlib",
+      "typing",
+      "unittest",
+      "pytest",
+      "aiohttp",
+      "asyncpg",
+      "cryptography",
+      "complete_n8n_workflow_integration",
+      "shutil",
+      "shutil",
+      "shutil"
+    ],
+    "metadata": {
+      "size": 23152,
+      "modified": "2025-09-19T13:19:15.422568",
+      "extension": ".py",
+      "lines": 656
+    }
+  },
+  "__init___py": {
+    "id": "__init___py",
+    "name": "__init__.py",
+    "path": "__init__.py",
+    "category": "core",
+    "type": "python_module",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "warnings",
+      "",
+      "warnings",
+      "",
+      "warnings",
+      "",
+      "warnings",
+      "",
+      "warnings",
+      "warnings",
+      "warnings"
+    ],
+    "metadata": {
+      "size": 7269,
+      "modified": "2025-09-19T14:29:49.381200",
+      "extension": ".py",
+      "lines": 214
+    }
+  },
+  "complete_n8n_workflow_integration_py": {
+    "id": "complete_n8n_workflow_integration_py",
+    "name": "complete_n8n_workflow_integration.py",
+    "path": "complete_n8n_workflow_integration.py",
+    "category": "integrations",
+    "type": "integration",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "asyncio",
+      "hashlib",
+      "hmac",
+      "json",
+      "logging",
+      "os",
+      "secrets",
+      "signal",
+      "sys",
+      "time",
+      "uuid",
+      "contextlib",
+      "pathlib",
+      "typing",
+      "platform",
+      "aiofiles",
+      "aiohttp",
+      "asyncpg",
+      "dataclasses",
+      "datetime",
+      "psutil",
+      "yaml",
+      "jsonschema",
+      "cryptography",
+      "cryptography",
+      "cryptography",
+      "base64",
+      "asyncio",
+      "logging",
+      "typing"
+    ],
+    "metadata": {
+      "size": 46502,
+      "modified": "2025-09-19T06:07:32.001821",
+      "extension": ".py",
+      "lines": 1147
+    }
+  },
+  "alignment_categories_json": {
+    "id": "alignment_categories_json",
+    "name": "alignment_categories.json",
+    "path": "alignment_categories.json",
+    "category": "configurations",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 5779,
+      "modified": "2025-09-19T14:55:59.077662",
+      "extension": ".json",
+      "lines": 173
+    }
+  },
+  "alignment_nodes_json": {
+    "id": "alignment_nodes_json",
+    "name": "alignment_nodes.json",
+    "path": "alignment_nodes.json",
+    "category": "configurations",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 31772,
+      "modified": "2025-09-19T14:55:59.076904",
+      "extension": ".json",
+      "lines": 1095
+    }
+  },
+  "FINAL_PROJECT_COMPLETION_CERTIFICATE_md": {
+    "id": "FINAL_PROJECT_COMPLETION_CERTIFICATE_md",
+    "name": "FINAL_PROJECT_COMPLETION_CERTIFICATE.md",
+    "path": "FINAL_PROJECT_COMPLETION_CERTIFICATE.md",
+    "category": "documentation",
+    "type": "documentation",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 7694,
+      "modified": "2025-09-19T05:19:28.925256",
+      "extension": ".md",
+      "lines": 253
+    }
+  },
+  "logging-config_json": {
+    "id": "logging-config_json",
+    "name": "logging-config.json",
+    "path": "logging-config.json",
+    "category": "configurations",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 5611,
+      "modified": "2025-09-19T13:16:50.432307",
+      "extension": ".json",
+      "lines": 205
+    }
+  },
+  "super_design_dashboards_integrate-search_js": {
+    "id": "super_design_dashboards_integrate-search_js",
+    "name": "integrate-search.js",
+    "path": "super_design_dashboards/integrate-search.js",
+    "category": "assets",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 17365,
+      "modified": "2025-09-19T13:03:22.789941",
+      "extension": ".js",
+      "lines": 568
+    }
+  },
+  "super_design_dashboards_modern-search-implementation_js": {
+    "id": "super_design_dashboards_modern-search-implementation_js",
+    "name": "modern-search-implementation.js",
+    "path": "super_design_dashboards/modern-search-implementation.js",
+    "category": "assets",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 30289,
+      "modified": "2025-09-19T13:03:20.846892",
+      "extension": ".js",
+      "lines": 1057
+    }
+  },
+  "super_design_dashboards_tsconfig_node_json": {
+    "id": "super_design_dashboards_tsconfig_node_json",
+    "name": "tsconfig.node.json",
+    "path": "super_design_dashboards/tsconfig.node.json",
+    "category": "dashboard",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 253,
+      "modified": "2025-09-19T14:37:48.131457",
+      "extension": ".json",
+      "lines": 12
+    }
+  },
+  "super_design_dashboards_validate-dashboard_py": {
+    "id": "super_design_dashboards_validate-dashboard_py",
+    "name": "validate-dashboard.py",
+    "path": "super_design_dashboards/validate-dashboard.py",
+    "category": "dashboard",
+    "type": "dashboard",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "json",
+      "sys",
+      "os",
+      "logging",
+      "hashlib",
+      "time",
+      "re",
+      "argparse",
+      "urllib",
+      "pathlib",
+      "typing",
+      "dataclasses",
+      "datetime",
+      "jsonschema",
+      "jsonschema",
+      "traceback"
+    ],
+    "metadata": {
+      "size": 20988,
+      "modified": "2025-09-19T13:09:16.274461",
+      "extension": ".py",
+      "lines": 546
+    }
+  },
+  "super_design_dashboards_index_html": {
+    "id": "super_design_dashboards_index_html",
+    "name": "index.html",
+    "path": "super_design_dashboards/index.html",
+    "category": "dashboard",
+    "type": "html",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 6510,
+      "modified": "2025-09-19T14:46:49.169398",
+      "extension": ".html",
+      "lines": 162
+    }
+  },
+  "super_design_dashboards_tailwind_config_js": {
+    "id": "super_design_dashboards_tailwind_config_js",
+    "name": "tailwind.config.js",
+    "path": "super_design_dashboards/tailwind.config.js",
+    "category": "dashboard",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 3301,
+      "modified": "2025-09-19T14:31:41.484523",
+      "extension": ".js",
+      "lines": 104
+    }
+  },
+  "super_design_dashboards_automation-bot-integration_js": {
+    "id": "super_design_dashboards_automation-bot-integration_js",
+    "name": "automation-bot-integration.js",
+    "path": "super_design_dashboards/automation-bot-integration.js",
+    "category": "dashboard",
+    "type": "integration",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 3425,
+      "modified": "2025-09-19T14:03:09.881853",
+      "extension": ".js",
+      "lines": 126
+    }
+  },
+  "super_design_dashboards_dashboard-monitoring-integration_js": {
+    "id": "super_design_dashboards_dashboard-monitoring-integration_js",
+    "name": "dashboard-monitoring-integration.js",
+    "path": "super_design_dashboards/dashboard-monitoring-integration.js",
+    "category": "dashboard",
+    "type": "dashboard",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 28470,
+      "modified": "2025-09-19T13:55:37.635931",
+      "extension": ".js",
+      "lines": 1025
+    }
+  },
+  "super_design_dashboards_content-discovery-integration_js": {
+    "id": "super_design_dashboards_content-discovery-integration_js",
+    "name": "content-discovery-integration.js",
+    "path": "super_design_dashboards/content-discovery-integration.js",
+    "category": "dashboard",
+    "type": "integration",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 26941,
+      "modified": "2025-09-19T13:57:39.568492",
+      "extension": ".js",
+      "lines": 997
+    }
+  },
+  "super_design_dashboards_README-REACT_md": {
+    "id": "super_design_dashboards_README-REACT_md",
+    "name": "README-REACT.md",
+    "path": "super_design_dashboards/README-REACT.md",
+    "category": "dashboard",
+    "type": "documentation",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 7286,
+      "modified": "2025-09-19T14:33:59.722007",
+      "extension": ".md",
+      "lines": 260
+    }
+  },
+  "super_design_dashboards__pre-commit-config_yaml": {
+    "id": "super_design_dashboards__pre-commit-config_yaml",
+    "name": ".pre-commit-config.yaml",
+    "path": "super_design_dashboards/.pre-commit-config.yaml",
+    "category": "dashboard",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 8361,
+      "modified": "2025-09-19T13:21:02.024358",
+      "extension": ".yaml",
+      "lines": 0
+    }
+  },
+  "super_design_dashboards_REFACTORING_SUMMARY_md": {
+    "id": "super_design_dashboards_REFACTORING_SUMMARY_md",
+    "name": "REFACTORING_SUMMARY.md",
+    "path": "super_design_dashboards/REFACTORING_SUMMARY.md",
+    "category": "dashboard",
+    "type": "documentation",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 6346,
+      "modified": "2025-09-19T05:19:29.185033",
+      "extension": ".md",
+      "lines": 168
+    }
+  },
+  "super_design_dashboards_Makefile": {
+    "id": "super_design_dashboards_Makefile",
+    "name": "Makefile",
+    "path": "super_design_dashboards/Makefile",
+    "category": "dashboard",
+    "type": "documentation",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 13089,
+      "modified": "2025-09-19T13:15:51.281464",
+      "extension": "",
+      "lines": 0
+    }
+  },
+  "super_design_dashboards_package-react_json": {
+    "id": "super_design_dashboards_package-react_json",
+    "name": "package-react.json",
+    "path": "super_design_dashboards/package-react.json",
+    "category": "dashboard",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 4209,
+      "modified": "2025-09-19T14:29:50.597485",
+      "extension": ".json",
+      "lines": 144
+    }
+  },
+  "super_design_dashboards_dashboard-styles_css": {
+    "id": "super_design_dashboards_dashboard-styles_css",
+    "name": "dashboard-styles.css",
+    "path": "super_design_dashboards/dashboard-styles.css",
+    "category": "dashboard",
+    "type": "dashboard",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 15605,
+      "modified": "2025-09-19T06:08:53.184092",
+      "extension": ".css",
+      "lines": 689
+    }
+  },
+  "super_design_dashboards_dashboard-data_json": {
+    "id": "super_design_dashboards_dashboard-data_json",
+    "name": "dashboard-data.json",
+    "path": "super_design_dashboards/dashboard-data.json",
+    "category": "dashboard",
+    "type": "dashboard",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 5744,
+      "modified": "2025-09-19T00:04:33.261192",
+      "extension": ".json",
+      "lines": 194
+    }
+  },
+  "super_design_dashboards_security-config_json": {
+    "id": "super_design_dashboards_security-config_json",
+    "name": "security-config.json",
+    "path": "super_design_dashboards/security-config.json",
+    "category": "dashboard",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 9129,
+      "modified": "2025-09-19T14:04:16.160584",
+      "extension": ".json",
+      "lines": 319
+    }
+  },
+  "super_design_dashboards_dashboard-script_js": {
+    "id": "super_design_dashboards_dashboard-script_js",
+    "name": "dashboard-script.js",
+    "path": "super_design_dashboards/dashboard-script.js",
+    "category": "dashboard",
+    "type": "dashboard",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 33813,
+      "modified": "2025-09-19T06:04:29.275009",
+      "extension": ".js",
+      "lines": 1110
+    }
+  },
+  "super_design_dashboards_security-compliance-integration_js": {
+    "id": "super_design_dashboards_security-compliance-integration_js",
+    "name": "security-compliance-integration.js",
+    "path": "super_design_dashboards/security-compliance-integration.js",
+    "category": "dashboard",
+    "type": "integration",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 40551,
+      "modified": "2025-09-19T14:04:16.184261",
+      "extension": ".js",
+      "lines": 1506
+    }
+  },
+  "super_design_dashboards_ecosystem-health-monitoring_js": {
+    "id": "super_design_dashboards_ecosystem-health-monitoring_js",
+    "name": "ecosystem-health-monitoring.js",
+    "path": "super_design_dashboards/ecosystem-health-monitoring.js",
+    "category": "assets",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 5465,
+      "modified": "2025-09-19T14:04:16.160603",
+      "extension": ".js",
+      "lines": 195
+    }
+  },
+  "super_design_dashboards___init___py": {
+    "id": "super_design_dashboards___init___py",
+    "name": "__init__.py",
+    "path": "super_design_dashboards/__init__.py",
+    "category": "dashboard",
+    "type": "python_module",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 0,
+      "modified": "2025-09-19T05:19:27.555133",
+      "extension": ".py",
+      "lines": 0
+    }
+  },
+  "super_design_dashboards_test-suite_js": {
+    "id": "super_design_dashboards_test-suite_js",
+    "name": "test-suite.js",
+    "path": "super_design_dashboards/test-suite.js",
+    "category": "dashboard",
+    "type": "test",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 32971,
+      "modified": "2025-09-19T13:11:10.187110",
+      "extension": ".js",
+      "lines": 963
+    }
+  },
+  "super_design_dashboards_OPERATIONS_GUIDE_md": {
+    "id": "super_design_dashboards_OPERATIONS_GUIDE_md",
+    "name": "OPERATIONS_GUIDE.md",
+    "path": "super_design_dashboards/OPERATIONS_GUIDE.md",
+    "category": "dashboard",
+    "type": "documentation",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 16479,
+      "modified": "2025-09-19T13:21:04.713721",
+      "extension": ".md",
+      "lines": 836
+    }
+  },
+  "super_design_dashboards_nlp-processing-integration_js": {
+    "id": "super_design_dashboards_nlp-processing-integration_js",
+    "name": "nlp-processing-integration.js",
+    "path": "super_design_dashboards/nlp-processing-integration.js",
+    "category": "dashboard",
+    "type": "integration",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 25225,
+      "modified": "2025-09-19T13:55:42.173380",
+      "extension": ".js",
+      "lines": 876
+    }
+  },
+  "super_design_dashboards_search-intelligence-integration_js": {
+    "id": "super_design_dashboards_search-intelligence-integration_js",
+    "name": "search-intelligence-integration.js",
+    "path": "super_design_dashboards/search-intelligence-integration.js",
+    "category": "dashboard",
+    "type": "integration",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 17749,
+      "modified": "2025-09-19T13:53:15.419176",
+      "extension": ".js",
+      "lines": 644
+    }
+  },
+  "super_design_dashboards_README_md": {
+    "id": "super_design_dashboards_README_md",
+    "name": "README.md",
+    "path": "super_design_dashboards/README.md",
+    "category": "dashboard",
+    "type": "documentation",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 4724,
+      "modified": "2025-09-19T05:19:29.185318",
+      "extension": ".md",
+      "lines": 174
+    }
+  },
+  "super_design_dashboards_package-lock_json": {
+    "id": "super_design_dashboards_package-lock_json",
+    "name": "package-lock.json",
+    "path": "super_design_dashboards/package-lock.json",
+    "category": "dashboard",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 238214,
+      "modified": "2025-09-19T14:37:07.000392",
+      "extension": ".json",
+      "lines": 6848
+    }
+  },
+  "super_design_dashboards_package_json": {
+    "id": "super_design_dashboards_package_json",
+    "name": "package.json",
+    "path": "super_design_dashboards/package.json",
+    "category": "dashboard",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "@tanstack/react-query",
+      "framer-motion",
+      "lucide-react",
+      "clsx",
+      "tailwind-merge",
+      "react-hot-toast",
+      "react-helmet-async",
+      "@types/react",
+      "@types/react-dom",
+      "@types/node",
+      "@vitejs/plugin-react",
+      "vite",
+      "typescript",
+      "eslint",
+      "eslint-plugin-react-hooks",
+      "eslint-plugin-react-refresh",
+      "tailwindcss",
+      "autoprefixer",
+      "postcss",
+      "vitest",
+      "@testing-library/react",
+      "@testing-library/jest-dom",
+      "jsdom"
+    ],
+    "metadata": {
+      "size": 1394,
+      "modified": "2025-09-19T14:37:46.254049",
+      "extension": ".json",
+      "lines": 48
+    }
+  },
+  "super_design_dashboards_bot-communication-protocol_js": {
+    "id": "super_design_dashboards_bot-communication-protocol_js",
+    "name": "bot-communication-protocol.js",
+    "path": "super_design_dashboards/bot-communication-protocol.js",
+    "category": "assets",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 16377,
+      "modified": "2025-09-19T14:00:03.031781",
+      "extension": ".js",
+      "lines": 667
+    }
+  },
+  "super_design_dashboards_tsconfig_json": {
+    "id": "super_design_dashboards_tsconfig_json",
+    "name": "tsconfig.json",
+    "path": "super_design_dashboards/tsconfig.json",
+    "category": "dashboard",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 886,
+      "modified": "2025-09-19T14:33:26.023109",
+      "extension": ".json",
+      "lines": 36
+    }
+  },
+  "super_design_dashboards_iza_os_main_dashboard_html": {
+    "id": "super_design_dashboards_iza_os_main_dashboard_html",
+    "name": "iza_os_main_dashboard.html",
+    "path": "super_design_dashboards/iza_os_main_dashboard.html",
+    "category": "dashboard",
+    "type": "dashboard",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [],
+    "metadata": {
+      "size": 7385,
+      "modified": "2025-09-19T14:29:47.906172",
+      "extension": ".html",
+      "lines": 159
+    }
+  },
+  "super_design_dashboards_SECURITY_GUIDE_md": {
+    "id": "super_design_dashboards_SECURITY_GUIDE_md",
+    "name": "SECURITY_GUIDE.md",
+    "path": "super_design_dashboards/SECURITY_GUIDE.md",
+    "category": "dashboard",
+    "type": "documentation",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 19697,
+      "modified": "2025-09-19T13:13:34.346924",
+      "extension": ".md",
+      "lines": 747
+    }
+  },
+  "super_design_dashboards_vite_config_ts": {
+    "id": "super_design_dashboards_vite_config_ts",
+    "name": "vite.config.ts",
+    "path": "super_design_dashboards/vite.config.ts",
+    "category": "dashboard",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [
+      "vite';",
+      "@vitejs/plugin-react';",
+      "path';"
+    ],
+    "metadata": {
+      "size": 1313,
+      "modified": "2025-09-19T14:31:39.278522",
+      "extension": ".ts",
+      "lines": 53
+    }
+  },
+  "super_design_dashboards_vitest_config_ts": {
+    "id": "super_design_dashboards_vitest_config_ts",
+    "name": "vitest.config.ts",
+    "path": "super_design_dashboards/vitest.config.ts",
+    "category": "dashboard",
+    "type": "test",
+    "schema_type": "CreativeWork",
+    "dependencies": [
+      "vite';",
+      "@vitejs/plugin-react';",
+      "path';"
+    ],
+    "metadata": {
+      "size": 1082,
+      "modified": "2025-09-19T14:36:07.069262",
+      "extension": ".ts",
+      "lines": 44
+    }
+  },
+  "super_design_dashboards_monitoring-config_json": {
+    "id": "super_design_dashboards_monitoring-config_json",
+    "name": "monitoring-config.json",
+    "path": "super_design_dashboards/monitoring-config.json",
+    "category": "dashboard",
+    "type": "config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 11508,
+      "modified": "2025-09-19T13:12:09.666981",
+      "extension": ".json",
+      "lines": 462
+    }
+  },
+  "super_design_dashboards_config_staging_json": {
+    "id": "super_design_dashboards_config_staging_json",
+    "name": "staging.json",
+    "path": "super_design_dashboards/config/staging.json",
+    "category": "dashboard",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 1549,
+      "modified": "2025-09-19T13:16:00.692836",
+      "extension": ".json",
+      "lines": 68
+    }
+  },
+  "super_design_dashboards_config_testing_json": {
+    "id": "super_design_dashboards_config_testing_json",
+    "name": "testing.json",
+    "path": "super_design_dashboards/config/testing.json",
+    "category": "dashboard",
+    "type": "test",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 1661,
+      "modified": "2025-09-19T13:16:11.556562",
+      "extension": ".json",
+      "lines": 82
+    }
+  },
+  "super_design_dashboards_config_production_json": {
+    "id": "super_design_dashboards_config_production_json",
+    "name": "production.json",
+    "path": "super_design_dashboards/config/production.json",
+    "category": "dashboard",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 2459,
+      "modified": "2025-09-19T13:16:09.806639",
+      "extension": ".json",
+      "lines": 107
+    }
+  },
+  "super_design_dashboards_config_development_json": {
+    "id": "super_design_dashboards_config_development_json",
+    "name": "development.json",
+    "path": "super_design_dashboards/config/development.json",
+    "category": "dashboard",
+    "type": "json_config",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 1219,
+      "modified": "2025-09-19T13:15:59.374775",
+      "extension": ".json",
+      "lines": 53
+    }
+  },
+  "super_design_dashboards_src_App_tsx": {
+    "id": "super_design_dashboards_src_App_tsx",
+    "name": "App.tsx",
+    "path": "super_design_dashboards/src/App.tsx",
+    "category": "assets",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "react-router-dom';",
+      "./hooks/useAgentSystem';",
+      "./components/AgentDashboard';",
+      "./components/AgentFlow';",
+      "./components/AgentMetrics';",
+      "./components/AgentSettings';",
+      "./components/ui/LoadingSpinner';",
+      "react-error-boundary';"
+    ],
+    "metadata": {
+      "size": 2351,
+      "modified": "2025-09-19T14:29:53.221590",
+      "extension": ".tsx",
+      "lines": 58
+    }
+  },
+  "super_design_dashboards_src_main_tsx": {
+    "id": "super_design_dashboards_src_main_tsx",
+    "name": "main.tsx",
+    "path": "super_design_dashboards/src/main.tsx",
+    "category": "assets",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "react-dom/client';",
+      "react-router-dom';",
+      "@tanstack/react-query';",
+      "react-error-boundary';",
+      "react-hot-toast';",
+      "react-helmet-async';",
+      "./App';"
+    ],
+    "metadata": {
+      "size": 2674,
+      "modified": "2025-09-19T14:29:51.876945",
+      "extension": ".tsx",
+      "lines": 73
+    }
+  },
+  "super_design_dashboards_src_index_css": {
+    "id": "super_design_dashboards_src_index_css",
+    "name": "index.css",
+    "path": "super_design_dashboards/src/index.css",
+    "category": "assets",
+    "type": "css",
+    "schema_type": "CreativeWork",
+    "dependencies": [],
+    "metadata": {
+      "size": 6179,
+      "modified": "2025-09-19T14:33:26.023134",
+      "extension": ".css",
+      "lines": 275
+    }
+  },
+  "super_design_dashboards_src_test_setup_ts": {
+    "id": "super_design_dashboards_src_test_setup_ts",
+    "name": "setup.ts",
+    "path": "super_design_dashboards/src/test/setup.ts",
+    "category": "assets",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "@testing-library/react';",
+      "vitest';"
+    ],
+    "metadata": {
+      "size": 1595,
+      "modified": "2025-09-19T14:35:48.662108",
+      "extension": ".ts",
+      "lines": 77
+    }
+  },
+  "super_design_dashboards_src_utils_performance_tsx": {
+    "id": "super_design_dashboards_src_utils_performance_tsx",
+    "name": "performance.tsx",
+    "path": "super_design_dashboards/src/utils/performance.tsx",
+    "category": "dashboard",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "../components/ui/LoadingSpinner';"
+    ],
+    "metadata": {
+      "size": 7952,
+      "modified": "2025-09-19T14:36:04.477966",
+      "extension": ".tsx",
+      "lines": 286
+    }
+  },
+  "super_design_dashboards_src_utils_security_tsx": {
+    "id": "super_design_dashboards_src_utils_security_tsx",
+    "name": "security.tsx",
+    "path": "super_design_dashboards/src/utils/security.tsx",
+    "category": "dashboard",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "react-helmet-async';"
+    ],
+    "metadata": {
+      "size": 7090,
+      "modified": "2025-09-19T14:36:02.679156",
+      "extension": ".tsx",
+      "lines": 273
+    }
+  },
+  "super_design_dashboards_src_components_StatsGrid_tsx": {
+    "id": "super_design_dashboards_src_components_StatsGrid_tsx",
+    "name": "StatsGrid.tsx",
+    "path": "super_design_dashboards/src/components/StatsGrid.tsx",
+    "category": "components",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "framer-motion';"
+    ],
+    "metadata": {
+      "size": 5511,
+      "modified": "2025-09-19T14:31:30.363439",
+      "extension": ".tsx",
+      "lines": 205
+    }
+  },
+  "super_design_dashboards_src_components_Confetti_tsx": {
+    "id": "super_design_dashboards_src_components_Confetti_tsx",
+    "name": "Confetti.tsx",
+    "path": "super_design_dashboards/src/components/Confetti.tsx",
+    "category": "components",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "react-confetti';",
+      "framer-motion';"
+    ],
+    "metadata": {
+      "size": 2687,
+      "modified": "2025-09-19T14:33:54.621303",
+      "extension": ".tsx",
+      "lines": 95
+    }
+  },
+  "super_design_dashboards_src_components_AgentCard_tsx": {
+    "id": "super_design_dashboards_src_components_AgentCard_tsx",
+    "name": "AgentCard.tsx",
+    "path": "super_design_dashboards/src/components/AgentCard.tsx",
+    "category": "components",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "framer-motion';"
+    ],
+    "metadata": {
+      "size": 5050,
+      "modified": "2025-09-19T14:31:28.448447",
+      "extension": ".tsx",
+      "lines": 161
+    }
+  },
+  "super_design_dashboards_src_components_Footer_tsx": {
+    "id": "super_design_dashboards_src_components_Footer_tsx",
+    "name": "Footer.tsx",
+    "path": "super_design_dashboards/src/components/Footer.tsx",
+    "category": "components",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "framer-motion';",
+      "lucide-react';"
+    ],
+    "metadata": {
+      "size": 4917,
+      "modified": "2025-09-19T14:33:51.793117",
+      "extension": ".tsx",
+      "lines": 114
+    }
+  },
+  "super_design_dashboards_src_components_AgentDashboard_tsx": {
+    "id": "super_design_dashboards_src_components_AgentDashboard_tsx",
+    "name": "AgentDashboard.tsx",
+    "path": "super_design_dashboards/src/components/AgentDashboard.tsx",
+    "category": "components",
+    "type": "dashboard",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "framer-motion';",
+      "react-helmet-async';",
+      "../hooks/useAgentSystem';",
+      "../components/AgentCard';",
+      "../components/StatsGrid';",
+      "../components/AgentFlow';",
+      "../components/Header';",
+      "../components/Footer';",
+      "../components/Confetti';",
+      "../hooks/useAutoCelebrate';"
+    ],
+    "metadata": {
+      "size": 7658,
+      "modified": "2025-09-19T14:31:26.941055",
+      "extension": ".tsx",
+      "lines": 246
+    }
+  },
+  "super_design_dashboards_src_components_Header_tsx": {
+    "id": "super_design_dashboards_src_components_Header_tsx",
+    "name": "Header.tsx",
+    "path": "super_design_dashboards/src/components/Header.tsx",
+    "category": "components",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "framer-motion';",
+      "lucide-react';",
+      "react-router-dom';"
+    ],
+    "metadata": {
+      "size": 2739,
+      "modified": "2025-09-19T14:33:26.023194",
+      "extension": ".tsx",
+      "lines": 78
+    }
+  },
+  "super_design_dashboards_src_components_AgentFlow_tsx": {
+    "id": "super_design_dashboards_src_components_AgentFlow_tsx",
+    "name": "AgentFlow.tsx",
+    "path": "super_design_dashboards/src/components/AgentFlow.tsx",
+    "category": "components",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "framer-motion';",
+      "lucide-react';"
+    ],
+    "metadata": {
+      "size": 4415,
+      "modified": "2025-09-19T14:33:57.022252",
+      "extension": ".tsx",
+      "lines": 145
+    }
+  },
+  "super_design_dashboards_src_components_ui_LoadingSpinner_tsx": {
+    "id": "super_design_dashboards_src_components_ui_LoadingSpinner_tsx",
+    "name": "LoadingSpinner.tsx",
+    "path": "super_design_dashboards/src/components/ui/LoadingSpinner.tsx",
+    "category": "components",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "framer-motion';"
+    ],
+    "metadata": {
+      "size": 1081,
+      "modified": "2025-09-19T14:33:55.845744",
+      "extension": ".tsx",
+      "lines": 47
+    }
+  },
+  "super_design_dashboards_src_components___tests___AgentComponents_test_tsx": {
+    "id": "super_design_dashboards_src_components___tests___AgentComponents_test_tsx",
+    "name": "AgentComponents.test.tsx",
+    "path": "super_design_dashboards/src/components/__tests__/AgentComponents.test.tsx",
+    "category": "components",
+    "type": "test",
+    "schema_type": "CreativeWork",
+    "dependencies": [
+      "vitest';",
+      "@testing-library/react';",
+      "@tanstack/react-query';",
+      "react-router-dom';",
+      "../components/AgentCard';",
+      "../components/StatsGrid';",
+      "../components/ui/LoadingSpinner';"
+    ],
+    "metadata": {
+      "size": 6585,
+      "modified": "2025-09-19T14:36:01.398970",
+      "extension": ".tsx",
+      "lines": 235
+    }
+  },
+  "super_design_dashboards_src_hooks_useAgentSystem_ts": {
+    "id": "super_design_dashboards_src_hooks_useAgentSystem_ts",
+    "name": "useAgentSystem.ts",
+    "path": "super_design_dashboards/src/hooks/useAgentSystem.ts",
+    "category": "dashboard",
+    "type": "javascript",
+    "schema_type": "SoftwareApplication",
+    "dependencies": [
+      "react';",
+      "@tanstack/react-query';",
+      "react-hot-toast';"
+    ],
+    "metadata": {
+      "size": 5709,
+      "modified": "2025-09-19T14:31:32.060787",
+      "extension": ".ts",
+      "lines": 203
+    }
+  }
+}

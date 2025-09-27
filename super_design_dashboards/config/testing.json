@@ -1,0 +1,82 @@
+{
+  "environment": "testing",
+  "debug": true,
+  "logging": {
+    "level": "error",
+    "console": false,
+    "file": false,
+    "memory": true
+  },
+  "security": {
+    "csp": {
+      "reportOnly": true,
+      "directives": {
+        "default-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+        "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+        "style-src": ["'self'", "'unsafe-inline'"],
+        "img-src": ["'self'", "data:", "http:", "https:"],
+        "connect-src": ["'self'", "ws:", "wss:", "http:", "https:"]
+      }
+    },
+    "cors": {
+      "origin": "*",
+      "credentials": false
+    },
+    "rateLimiting": {
+      "enabled": false,
+      "windowMs": 60000,
+      "max": 10000
+    },
+    "authentication": {
+      "requireAuth": false,
+      "mockAuth": true
+    }
+  },
+  "performance": {
+    "caching": {
+      "enabled": false,
+      "maxAge": 0
+    },
+    "compression": {
+      "enabled": false
+    },
+    "minification": {
+      "enabled": false
+    }
+  },
+  "monitoring": {
+    "enabled": false,
+    "metrics": false,
+    "alerts": false
+  },
+  "features": {
+    "hotReload": true,
+    "sourceMaps": true,
+    "debugger": true,
+    "profiler": false,
+    "mockData": true,
+    "fixtures": true
+  },
+  "testing": {
+    "timeout": 5000,
+    "retries": 3,
+    "parallel": true,
+    "coverage": true,
+    "reports": true
+  },
+  "mockServices": {
+    "api": {
+      "enabled": true,
+      "baseUrl": "http://localhost:3001"
+    },
+    "websocket": {
+      "enabled": true,
+      "url": "ws://localhost:3002"
+    },
+    "database": {
+      "enabled": true,
+      "type": "sqlite",
+      "path": ":memory:"
+    }
+  }
+}

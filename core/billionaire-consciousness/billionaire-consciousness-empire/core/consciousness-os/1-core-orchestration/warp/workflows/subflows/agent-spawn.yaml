@@ -1,0 +1,57 @@
+# Agent Spawn Subflow
+
+Automated agent creation and initialization workflow.
+
+## Trigger Conditions
+- New task requires specific agent type
+- System load requires additional agents
+- Manual agent spawn request
+- Agent failure requires replacement
+
+## Process Flow
+1. **Validate Request**: Check agent type and requirements
+2. **Resource Check**: Ensure sufficient resources available
+3. **Agent Creation**: Initialize agent with proper configuration
+4. **Health Verification**: Confirm agent is running and responsive
+5. **Registration**: Add agent to active agent registry
+6. **Task Assignment**: Assign initial tasks if specified
+
+## Configuration
+```yaml
+agent_types:
+  claude:
+    image: "claude-agent:latest"
+    resources:
+      cpu: "500m"
+      memory: "1Gi"
+    env:
+      CLAUDE_API_KEY: "${CLAUDE_API_KEY}"
+  
+  local_llm:
+    image: "local-llm-agent:latest"
+    resources:
+      cpu: "1000m"
+      memory: "2Gi"
+    env:
+      OLLAMA_URL: "http://ollama:11434"
+  
+  fellou:
+    image: "fellou-agent:latest"
+    resources:
+      cpu: "2000m"
+      memory: "4Gi"
+    env:
+      FELLOU_API_KEY: "${FELLOU_API_KEY}"
+```
+
+## Success Criteria
+- Agent responds to health check within 30 seconds
+- Agent successfully processes test task
+- Agent registers in system registry
+- Resource usage within expected limits
+
+## Error Handling
+- Retry agent creation up to 3 times
+- Fallback to alternative agent type if available
+- Alert on persistent failures
+- Clean up failed agent resources

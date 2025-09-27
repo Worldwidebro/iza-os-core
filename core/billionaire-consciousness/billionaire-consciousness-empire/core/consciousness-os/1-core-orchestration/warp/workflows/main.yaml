@@ -1,0 +1,71 @@
+# Core Orchestration - Master Workflow
+
+This is the central orchestration system that coordinates all IZA OS components.
+
+## Workflow Types
+
+### Main Workflow (`main.yaml`)
+- **Agent Orchestration**: Spawn, monitor, and manage AI agents
+- **Task Distribution**: Route tasks to appropriate agents
+- **MCP Server Management**: Deploy and monitor MCP servers
+- **System Health**: Monitor overall system health and performance
+- **Resource Allocation**: Optimize resource usage across components
+
+### Subflows (`subflows/`)
+- **agent-spawn.yaml**: Agent creation and initialization
+- **task-distribution.yaml**: Intelligent task routing
+- **health-monitoring.yaml**: System health checks and alerts
+- **resource-optimization.yaml**: Resource usage optimization
+- **mcp-deployment.yaml**: MCP server deployment and management
+
+## Integration Points
+
+- **Warp Commands**: CLI macros for quick actions
+- **Raycast Extensions**: Desktop integration
+- **MCP Server**: Central routing for all AI calls
+- **Agent Manager**: Orchestrates agent lifecycle
+- **Health Monitor**: Tracks system performance
+
+## Usage
+
+```bash
+# Run main workflow
+warp run workflows/main.yaml
+
+# Execute specific subflow
+warp run workflows/subflows/agent-spawn.yaml
+
+# Quick commands
+warp run commands/spawn-agent.sh
+warp run commands/deploy-mcp.sh
+```
+
+## Configuration
+
+```yaml
+# main.yaml configuration
+orchestration:
+  max_agents: 10
+  health_check_interval: 30
+  resource_threshold: 0.8
+  auto_scaling: true
+
+agents:
+  claude:
+    max_concurrent: 3
+    timeout: 300
+  local_llm:
+    max_concurrent: 2
+    timeout: 600
+  fellou:
+    max_concurrent: 1
+    timeout: 1800
+
+mcp_servers:
+  finance:
+    port: 8080
+    health_check: "/health"
+  research:
+    port: 8081
+    health_check: "/health"
+```

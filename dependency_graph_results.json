@@ -1,0 +1,874 @@
+{
+  "dependency_analysis": {
+    "internal_dependencies": {
+      "chaos_engineering_suite": [],
+      "iza_os_consolidation_plan": [],
+      "iza_huggingface_model_stack": [],
+      "test_integration_complete": [],
+      "huggingface_agents_integration": [],
+      "simple_orchestrator": [],
+      "perplexica_deepresearch_integration": [],
+      "enterprise_task_orchestrator": [],
+      "huggingface_orchestration": [],
+      "huggingface_integration": [],
+      "test_imports": [],
+      "realtime_observability_service": [],
+      "__init__": [
+        "memu_logging"
+      ],
+      "complete_n8n_workflow_integration": [],
+      "iza_os_master_dashboard": [],
+      "compliance_automation_system": [],
+      "integrate_complete_system": [],
+      "huggingface_mcp_server": [],
+      "memu_logging": [],
+      "huggingface_dashboard": [],
+      "dependency_graph_mapper": [],
+      "autonomous_task_orchestrator": [],
+      "iza_huggingface_system": [],
+      "llamafactory_integration": [],
+      "huggingface_smol_agents": [],
+      "ecosystem_architecture_blueprint": [],
+      "huggingface_tiny_agents": []
+    },
+    "external_dependencies": {
+      "chaos_engineering_suite": [
+        "structlog",
+        "subprocess",
+        "pathlib",
+        "enum",
+        "yaml",
+        "os",
+        "signal",
+        "datetime",
+        "prometheus_client",
+        "sys",
+        "psutil",
+        "dataclasses",
+        "typing",
+        "random",
+        "json",
+        "logging",
+        "docker",
+        "time",
+        "aiohttp",
+        "asyncio"
+      ],
+      "iza_os_consolidation_plan": [
+        "pathlib",
+        "shutil",
+        "os",
+        "typing"
+      ],
+      "iza_huggingface_model_stack": [
+        "enum",
+        "dataclasses",
+        "os",
+        "datetime",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "test_integration_complete": [
+        "unittest",
+        "time",
+        "os",
+        "pytest",
+        "asyncpg",
+        "complete_n8n_workflow_integration",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio",
+        "shutil"
+      ],
+      "huggingface_agents_integration": [
+        "smolagents",
+        "enum",
+        "dataclasses",
+        "os",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "simple_orchestrator": [
+        "time",
+        "subprocess",
+        "pathlib",
+        "sys",
+        "asyncio"
+      ],
+      "perplexica_deepresearch_integration": [
+        "enum",
+        "structlog",
+        "time",
+        "dataclasses",
+        "yaml",
+        "os",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "requests",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "enterprise_task_orchestrator": [
+        "structlog",
+        "abc",
+        "pathlib",
+        "enum",
+        "yaml",
+        "os",
+        "sqlalchemy",
+        "datetime",
+        "prometheus_client",
+        "sys",
+        "sentry_sdk",
+        "dataclasses",
+        "pydantic",
+        "typing",
+        "json",
+        "logging",
+        "docker",
+        "time",
+        "functools",
+        "sqlite3",
+        "contextlib",
+        "aiohttp",
+        "asyncio"
+      ],
+      "huggingface_orchestration": [
+        "enum",
+        "dataclasses",
+        "os",
+        "uuid",
+        "pathlib",
+        "datetime",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "huggingface_integration": [
+        "enum",
+        "dataclasses",
+        "os",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "test_imports": [
+        "sqlalchemy",
+        "anthropic",
+        "uvicorn",
+        "fastapi"
+      ],
+      "realtime_observability_service": [
+        "time",
+        "fastapi",
+        "dataclasses",
+        "socketio",
+        "uvicorn",
+        "datetime",
+        "typing",
+        "random",
+        "json",
+        "logging",
+        "asyncio",
+        "psutil"
+      ],
+      "__init__": [
+        "IZA_OS_DATABASE_MODELS",
+        "IZA_OS_MAIN",
+        "warnings",
+        "IZA_OS_MEMORY_STORAGE_MANAGER",
+        "IZA_OS_WEBSOCKET_MANAGER",
+        "IZA_OS_API_BACKEND",
+        "IZA_OS_CONFIG_MANAGER",
+        "IZA_OS_AGENT_SYSTEM_MANAGER"
+      ],
+      "complete_n8n_workflow_integration": [
+        "hmac",
+        "aiofiles",
+        "pathlib",
+        "platform",
+        "yaml",
+        "os",
+        "uuid",
+        "signal",
+        "datetime",
+        "sys",
+        "hashlib",
+        "jsonschema",
+        "psutil",
+        "dataclasses",
+        "asyncpg",
+        "secrets",
+        "typing",
+        "json",
+        "logging",
+        "base64",
+        "time",
+        "contextlib",
+        "aiohttp",
+        "asyncio"
+      ],
+      "iza_os_master_dashboard": [
+        "time",
+        "streamlit",
+        "os",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "requests",
+        "pandas",
+        "plotly",
+        "json",
+        "psutil"
+      ],
+      "compliance_automation_system": [
+        "enum",
+        "docker",
+        "structlog",
+        "time",
+        "dataclasses",
+        "yaml",
+        "os",
+        "sqlite3",
+        "sqlalchemy",
+        "pathlib",
+        "datetime",
+        "prometheus_client",
+        "sys",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "integrate_complete_system": [
+        "json",
+        "time",
+        "os",
+        "subprocess",
+        "pathlib",
+        "sys",
+        "typing",
+        "logging",
+        "asyncio"
+      ],
+      "huggingface_mcp_server": [
+        "enum",
+        "time",
+        "socket",
+        "dataclasses",
+        "os",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "threading",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "memu_logging": [
+        "time",
+        "pydantic",
+        "os",
+        "aiofiles",
+        "queue",
+        "uuid",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "threading",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "huggingface_dashboard": [
+        "enum",
+        "dataclasses",
+        "os",
+        "pathlib",
+        "datetime",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "dependency_graph_mapper": [
+        "matplotlib",
+        "networkx",
+        "subprocess",
+        "pathlib",
+        "typing",
+        "json",
+        "re"
+      ],
+      "autonomous_task_orchestrator": [
+        "enum",
+        "docker",
+        "time",
+        "dataclasses",
+        "yaml",
+        "os",
+        "sqlite3",
+        "sqlalchemy",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "iza_huggingface_system": [
+        "enum",
+        "dataclasses",
+        "os",
+        "pathlib",
+        "datetime",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "llamafactory_integration": [
+        "React",
+        "enum",
+        "structlog",
+        "time",
+        "dataclasses",
+        "yaml",
+        "os",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "requests",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ],
+      "huggingface_smol_agents": [
+        "enum",
+        "json",
+        "dataclasses",
+        "os",
+        "uuid",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "aiohttp",
+        "re",
+        "logging",
+        "asyncio"
+      ],
+      "ecosystem_architecture_blueprint": [
+        "os",
+        "subprocess",
+        "pathlib",
+        "typing",
+        "json"
+      ],
+      "huggingface_tiny_agents": [
+        "enum",
+        "dataclasses",
+        "os",
+        "uuid",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "sys",
+        "typing",
+        "aiohttp",
+        "json",
+        "logging",
+        "asyncio"
+      ]
+    },
+    "circular_dependencies": [],
+    "version_conflicts": [],
+    "critical_paths": []
+  },
+  "version_conflicts": [
+    {
+      "package": "fastapi",
+      "versions": [
+        "0.100.0",
+        "0.104.1",
+        "0.117.1"
+      ],
+      "severity": "medium",
+      "resolution": "Standardize to latest version: 0.117.1"
+    },
+    {
+      "package": "streamlit",
+      "versions": [
+        "1.28.0",
+        "1.35.0",
+        "1.49.1"
+      ],
+      "severity": "medium",
+      "resolution": "Standardize to latest version: 1.49.1"
+    },
+    {
+      "package": "pandas",
+      "versions": [
+        "2.0.0",
+        "2.1.0",
+        "2.3.2"
+      ],
+      "severity": "medium",
+      "resolution": "Standardize to latest version: 2.3.2"
+    },
+    {
+      "package": "numpy",
+      "versions": [
+        "1.24.0",
+        "1.25.0",
+        "1.26.0"
+      ],
+      "severity": "medium",
+      "resolution": "Standardize to latest version: 1.26.0"
+    },
+    {
+      "package": "sqlalchemy",
+      "versions": [
+        "2.0.0",
+        "2.0.43"
+      ],
+      "severity": "medium",
+      "resolution": "Standardize to latest version: 2.0.43"
+    },
+    {
+      "package": "anthropic",
+      "versions": [
+        "0.65.0",
+        "0.68.0"
+      ],
+      "severity": "medium",
+      "resolution": "Standardize to latest version: 0.68.0"
+    }
+  ],
+  "priority_matrix": {
+    "matrix": {
+      "chaos_engineering_suite": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "iza_os_consolidation_plan": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "iza_huggingface_model_stack": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "test_integration_complete": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "huggingface_agents_integration": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "simple_orchestrator": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "perplexica_deepresearch_integration": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "enterprise_task_orchestrator": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "huggingface_orchestration": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "huggingface_integration": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "test_imports": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "realtime_observability_service": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "__init__": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 1,
+        "priority_score": 0.0
+      },
+      "memu_logging": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 1,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "complete_n8n_workflow_integration": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "iza_os_master_dashboard": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "compliance_automation_system": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "integrate_complete_system": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "huggingface_mcp_server": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "huggingface_dashboard": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "dependency_graph_mapper": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "autonomous_task_orchestrator": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "iza_huggingface_system": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "llamafactory_integration": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "huggingface_smol_agents": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "ecosystem_architecture_blueprint": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      },
+      "huggingface_tiny_agents": {
+        "betweenness_centrality": 0,
+        "closeness_centrality": 0,
+        "pagerank": 0,
+        "in_degree": 0,
+        "out_degree": 0,
+        "priority_score": 0.0
+      }
+    },
+    "sorted_priorities": [
+      [
+        "chaos_engineering_suite",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "iza_os_consolidation_plan",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "iza_huggingface_model_stack",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "test_integration_complete",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "huggingface_agents_integration",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "simple_orchestrator",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "perplexica_deepresearch_integration",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "enterprise_task_orchestrator",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "huggingface_orchestration",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ],
+      [
+        "huggingface_integration",
+        {
+          "betweenness_centrality": 0,
+          "closeness_centrality": 0,
+          "pagerank": 0,
+          "in_degree": 0,
+          "out_degree": 0,
+          "priority_score": 0.0
+        }
+      ]
+    ]
+  },
+  "resolution_strategy": {
+    "immediate_actions": [
+      "Standardize Python version to 3.13",
+      "Unify FastAPI version to 0.117.1",
+      "Consolidate Streamlit to 1.49.1",
+      "Standardize SQLAlchemy to 2.0.43"
+    ],
+    "migration_phases": {
+      "phase_1": {
+        "title": "Critical Dependencies",
+        "tasks": [
+          "Resolve circular dependencies",
+          "Fix version conflicts in core services",
+          "Establish dependency injection patterns"
+        ],
+        "duration": "1 week"
+      },
+      "phase_2": {
+        "title": "Service Dependencies",
+        "tasks": [
+          "Refactor service-to-service dependencies",
+          "Implement proper interface contracts",
+          "Add dependency health checks"
+        ],
+        "duration": "2 weeks"
+      },
+      "phase_3": {
+        "title": "External Dependencies",
+        "tasks": [
+          "Audit external package usage",
+          "Implement dependency caching",
+          "Add fallback mechanisms"
+        ],
+        "duration": "1 week"
+      }
+    },
+    "tools_and_automation": [
+      "Dependabot for automated updates",
+      "pip-audit for security scanning",
+      "Custom dependency analyzer",
+      "Automated testing pipeline"
+    ]
+  },
+  "visualization_path": "/Users/divinejohns/memU/memu/dependency_graph.png",
+  "statistics": {
+    "total_nodes": 27,
+    "total_edges": 1,
+    "density": 0.0014245014245014246,
+    "is_dag": true
+  },
+  "status": "completed",
+  "next_steps": [
+    "Execute PROMPT 3: Technology Stack Standardization",
+    "Begin dependency resolution implementation",
+    "Set up automated dependency monitoring"
+  ]
+}

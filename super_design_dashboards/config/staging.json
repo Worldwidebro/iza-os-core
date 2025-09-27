@@ -1,0 +1,68 @@
+{
+  "environment": "staging",
+  "debug": false,
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": true,
+    "filePath": "/var/log/iza-os/staging.log"
+  },
+  "security": {
+    "csp": {
+      "reportOnly": false,
+      "directives": {
+        "default-src": ["'self'"],
+        "script-src": ["'self'", "https://cdnjs.cloudflare.com"],
+        "style-src": ["'self'", "https://fonts.googleapis.com"],
+        "img-src": ["'self'", "data:", "https:"],
+        "connect-src": ["'self'", "wss:", "https://api.staging.iza-os.com"]
+      }
+    },
+    "cors": {
+      "origin": ["https://staging.iza-os.com", "https://dashboard-staging.iza-os.com"],
+      "credentials": true
+    },
+    "rateLimiting": {
+      "enabled": true,
+      "windowMs": 60000,
+      "max": 200
+    },
+    "authentication": {
+      "requireAuth": true,
+      "sessionTimeout": 3600000
+    }
+  },
+  "performance": {
+    "caching": {
+      "enabled": true,
+      "maxAge": 300000
+    },
+    "compression": {
+      "enabled": true
+    },
+    "minification": {
+      "enabled": true
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics": true,
+    "alerts": true,
+    "endpoints": {
+      "health": "/health",
+      "metrics": "/metrics",
+      "status": "/status"
+    }
+  },
+  "features": {
+    "hotReload": false,
+    "sourceMaps": true,
+    "debugger": false,
+    "profiler": true
+  },
+  "external": {
+    "apiUrl": "https://api.staging.iza-os.com",
+    "websocketUrl": "wss://ws.staging.iza-os.com",
+    "cdnUrl": "https://cdn.staging.iza-os.com"
+  }
+}

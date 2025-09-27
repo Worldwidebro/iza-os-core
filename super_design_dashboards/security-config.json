@@ -1,0 +1,319 @@
+{
+  "security": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-19T00:00:00Z",
+    "complianceStandards": [
+      "OWASP",
+      "ISO27001",
+      "SOC2",
+      "GDPR",
+      "CCPA",
+      "HIPAA"
+    ],
+    "securityLevels": {
+      "low": {
+        "description": "Basic security measures",
+        "requirements": ["inputValidation", "basicAuth"]
+      },
+      "medium": {
+        "description": "Standard security measures",
+        "requirements": ["inputValidation", "auth", "encryption", "auditLogging"]
+      },
+      "high": {
+        "description": "Enhanced security measures",
+        "requirements": ["inputValidation", "strongAuth", "encryption", "auditLogging", "monitoring", "incidentResponse"]
+      },
+      "critical": {
+        "description": "Maximum security measures",
+        "requirements": ["inputValidation", "multiFactorAuth", "endToEndEncryption", "comprehensiveAuditLogging", "realTimeMonitoring", "automatedIncidentResponse", "penetrationTesting"]
+      }
+    },
+    "currentLevel": "high",
+    "policies": {
+      "authentication": {
+        "enabled": true,
+        "multiFactor": true,
+        "sessionTimeout": 1800,
+        "maxLoginAttempts": 5,
+        "lockoutDuration": 900,
+        "passwordPolicy": {
+          "minLength": 12,
+          "requireUppercase": true,
+          "requireLowercase": true,
+          "requireNumbers": true,
+          "requireSpecialChars": true,
+          "maxAge": 90
+        }
+      },
+      "authorization": {
+        "enabled": true,
+        "roleBasedAccess": true,
+        "principleOfLeastPrivilege": true,
+        "permissionMatrix": {
+          "admin": ["read", "write", "delete", "execute", "manage"],
+          "user": ["read", "write"],
+          "viewer": ["read"],
+          "guest": []
+        }
+      },
+      "dataProtection": {
+        "encryptionAtRest": true,
+        "encryptionInTransit": true,
+        "encryptionAlgorithm": "AES-256",
+        "keyManagement": "AWS KMS",
+        "dataRetention": 2555,
+        "dataClassification": {
+          "public": "noEncryption",
+          "internal": "standardEncryption",
+          "confidential": "strongEncryption",
+          "restricted": "maximumEncryption"
+        }
+      },
+      "networkSecurity": {
+        "httpsOnly": true,
+        "tlsVersion": "1.3",
+        "corsPolicy": "strict",
+        "allowedOrigins": ["https://localhost:3000", "https://iza-os.com"],
+        "rateLimiting": {
+          "enabled": true,
+          "requestsPerMinute": 100,
+          "requestsPerHour": 1000,
+          "burstLimit": 20
+        },
+        "firewall": {
+          "enabled": true,
+          "blockedPorts": [21, 23, 135, 139, 445],
+          "allowedPorts": [80, 443, 22, 3389]
+        }
+      },
+      "monitoring": {
+        "enabled": true,
+        "logLevel": "info",
+        "auditLogging": true,
+        "securityEvents": true,
+        "performanceMonitoring": true,
+        "alertThresholds": {
+          "failedLogins": 5,
+          "suspiciousActivity": 3,
+          "dataBreach": 1,
+          "systemCompromise": 1
+        },
+        "retentionPeriod": 365
+      },
+      "incidentResponse": {
+        "enabled": true,
+        "automatedResponse": true,
+        "escalationMatrix": {
+          "level1": "security@iza-os.com",
+          "level2": "ciso@iza-os.com",
+          "level3": "ceo@iza-os.com"
+        },
+        "responseTime": {
+          "critical": 15,
+          "high": 60,
+          "medium": 240,
+          "low": 1440
+        }
+      }
+    },
+    "vulnerabilities": {
+      "scanning": {
+        "enabled": true,
+        "frequency": "daily",
+        "tools": ["OWASP ZAP", "Nessus", "Qualys"],
+        "autoRemediation": true
+      },
+      "commonVulnerabilities": [
+        {
+          "name": "SQL Injection",
+          "severity": "high",
+          "description": "SQL injection attacks",
+          "mitigation": "parameterized queries, input validation"
+        },
+        {
+          "name": "XSS",
+          "severity": "medium",
+          "description": "Cross-site scripting attacks",
+          "mitigation": "output encoding, CSP headers"
+        },
+        {
+          "name": "CSRF",
+          "severity": "medium",
+          "description": "Cross-site request forgery",
+          "mitigation": "CSRF tokens, same-site cookies"
+        },
+        {
+          "name": "Broken Authentication",
+          "severity": "high",
+          "description": "Weak authentication mechanisms",
+          "mitigation": "strong passwords, MFA, session management"
+        },
+        {
+          "name": "Sensitive Data Exposure",
+          "severity": "high",
+          "description": "Exposure of sensitive data",
+          "mitigation": "encryption, data classification, access controls"
+        }
+      ]
+    },
+    "compliance": {
+      "gdpr": {
+        "enabled": true,
+        "dataProcessing": "lawful",
+        "consentManagement": true,
+        "rightToBeForgotten": true,
+        "dataPortability": true,
+        "privacyByDesign": true
+      },
+      "ccpa": {
+        "enabled": true,
+        "consumerRights": true,
+        "optOutMechanism": true,
+        "dataTransparency": true
+      },
+      "hipaa": {
+        "enabled": false,
+        "applicable": false,
+        "reason": "No PHI data processed"
+      },
+      "soc2": {
+        "enabled": true,
+        "trustPrinciples": ["security", "availability", "processing", "confidentiality", "privacy"],
+        "auditFrequency": "annual",
+        "certificationStatus": "inProgress"
+      }
+    },
+    "threats": {
+      "threatModeling": {
+        "enabled": true,
+        "methodology": "STRIDE",
+        "threats": [
+          {
+            "name": "Spoofing",
+            "description": "Impersonation attacks",
+            "mitigation": "strong authentication, identity verification"
+          },
+          {
+            "name": "Tampering",
+            "description": "Data modification attacks",
+            "mitigation": "integrity checks, digital signatures"
+          },
+          {
+            "name": "Repudiation",
+            "description": "Denial of actions",
+            "mitigation": "audit logs, non-repudiation mechanisms"
+          },
+          {
+            "name": "Information Disclosure",
+            "description": "Data exposure attacks",
+            "mitigation": "encryption, access controls, data classification"
+          },
+          {
+            "name": "Denial of Service",
+            "description": "Service availability attacks",
+            "mitigation": "rate limiting, load balancing, DDoS protection"
+          },
+          {
+            "name": "Elevation of Privilege",
+            "description": "Unauthorized privilege escalation",
+            "mitigation": "principle of least privilege, regular access reviews"
+          }
+        ]
+      },
+      "intrusionDetection": {
+        "enabled": true,
+        "signatureBased": true,
+        "anomalyBased": true,
+        "behavioralAnalysis": true,
+        "machineLearning": true
+      }
+    },
+    "securityMetrics": {
+      "vulnerabilityCount": 0,
+      "securityIncidents": 0,
+      "complianceScore": 95,
+      "lastSecurityAudit": "2025-09-15T00:00:00Z",
+      "nextSecurityAudit": "2025-12-15T00:00:00Z",
+      "securityTrainingCompleted": 85,
+      "patchesApplied": 100,
+      "criticalPatchesPending": 0
+    },
+    "alerts": {
+      "enabled": true,
+      "channels": ["email", "slack", "webhook"],
+      "severityLevels": {
+        "critical": {
+          "color": "red",
+          "sound": "alert",
+          "immediateNotification": true
+        },
+        "high": {
+          "color": "orange",
+          "sound": "warning",
+          "immediateNotification": false
+        },
+        "medium": {
+          "color": "yellow",
+          "sound": "info",
+          "immediateNotification": false
+        },
+        "low": {
+          "color": "blue",
+          "sound": "none",
+          "immediateNotification": false
+        }
+      }
+    }
+  },
+  "privacy": {
+    "version": "1.0.0",
+    "dataCollection": {
+      "enabled": true,
+      "purpose": "service improvement and analytics",
+      "lawfulBasis": "legitimate interest",
+      "dataTypes": ["usage analytics", "performance metrics", "error logs"],
+      "retentionPeriod": 90,
+      "anonymization": true
+    },
+    "userRights": {
+      "access": true,
+      "rectification": true,
+      "erasure": true,
+      "portability": true,
+      "objection": true,
+      "restriction": true
+    },
+    "consent": {
+      "required": true,
+      "granular": true,
+      "withdrawable": true,
+      "recorded": true
+    }
+  },
+  "audit": {
+    "version": "1.0.0",
+    "logging": {
+      "enabled": true,
+      "level": "info",
+      "retention": 2555,
+      "encryption": true,
+      "immutable": true
+    },
+    "events": [
+      "user_login",
+      "user_logout",
+      "data_access",
+      "data_modification",
+      "data_deletion",
+      "configuration_change",
+      "security_event",
+      "system_error"
+    ],
+    "compliance": {
+      "sox": false,
+      "pci": false,
+      "iso27001": true,
+      "gdpr": true
+    }
+  }
+}

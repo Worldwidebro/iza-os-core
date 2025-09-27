@@ -1,0 +1,265 @@
+version: '3.8'
+
+services:
+  # Core Database
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: iza_os
+      POSTGRES_USER: iza_user
+      POSTGRES_PASSWORD: iza_password_2024
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U iza_user -d iza_os"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - iza-network
+
+  # Caching Layer
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - iza-network
+
+  # Object Storage
+  minio:
+    image: minio/minio:latest
+    environment:
+      MINIO_ROOT_USER: iza_admin
+      MINIO_ROOT_PASSWORD: iza_minio_2024
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    networks:
+      - iza-network
+
+  # Graph Database
+  neo4j:
+    image: neo4j:5.15-community
+    environment:
+      NEO4J_AUTH: neo4j/iza_neo4j_2024
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/var/lib/neo4j/import
+      - neo4j_plugins:/plugins
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "iza_neo4j_2024", "RETURN 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - iza-network
+
+  # Vector Database
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      CHROMA_SERVER_HOST: 0.0.0.0
+      CHROMA_SERVER_HTTP_PORT: 8000
+      CHROMA_SERVER_CORS_ALLOW_ORIGINS: "*"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - iza-network
+
+  # MCP Server
+  mcp-server:
+    build:
+      context: ../1-core-orchestration/mcp
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=postgresql://iza_user:iza_password_2024@postgres:5432/iza_os
+      - REDIS_URL=redis://redis:6379/0
+      - CHROMA_URL=http://chroma:8000
+      - NEO4J_URL=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=iza_neo4j_2024
+      - JWT_PUBLIC_KEY=${JWT_PUBLIC_KEY}
+      - CLAUDE_API_KEY=${CLAUDE_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chroma:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - iza-network
+
+  # Local LLM (Ollama)
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - iza-network
+
+  # AnythingLLM
+  anythingllm:
+    image: anythingllm/anythingllm:latest
+    ports:
+      - "3001:3001"
+    environment:
+      - SERVER_PORT=3001
+      - DATABASE_CONNECTION_STRING=postgresql://iza_user:iza_password_2024@postgres:5432/anythingllm
+      - VECTOR_DB=chroma
+      - CHROMA_ENDPOINT=http://chroma:8000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      chroma:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - iza-network
+
+  # Botpress
+  botpress:
+    image: botpress/server:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://iza_user:iza_password_2024@postgres:5432/botpress
+      - REDIS_URL=redis://redis:6379/0
+      - EXTERNAL_URL=http://localhost:3000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/v1/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - iza-network
+
+  # Streamlit Dashboard
+  dashboard:
+    build:
+      context: ../5-research-docs
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - MCP_SERVER_URL=http://mcp-server:8080
+      - DATABASE_URL=postgresql://iza_user:iza_password_2024@postgres:5432/iza_os
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      mcp-server:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - iza-network
+
+  # Monitoring (Prometheus)
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    networks:
+      - iza-network
+
+  # Monitoring (Grafana)
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=iza_grafana_2024
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - iza-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:
+  neo4j_data:
+  neo4j_logs:
+  neo4j_import:
+  neo4j_plugins:
+  chroma_data:
+  ollama_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  iza-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

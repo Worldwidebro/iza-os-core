@@ -1,0 +1,62 @@
+
+services:
+  # Frontend React App
+  billionaire-dashboard:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    depends_on:
+      - api-backend
+    networks:
+      - billionaire-network
+
+  # Backend API
+  api-backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - CONSCIOUSNESS_LEVEL=api_consciousness
+    depends_on:
+      - ai-orchestrator
+    networks:
+      - billionaire-network
+
+  # AI Orchestrator
+  ai-orchestrator:
+    build: ./ai-integration
+    ports:
+      - "8001:8001"
+    environment:
+      - CONSCIOUSNESS_LEVEL=ai_orchestration_consciousness
+    networks:
+      - billionaire-network
+
+  # Redis for caching
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    networks:
+      - billionaire-network
+
+  # PostgreSQL for data storage
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=billionaire_brain
+      - POSTGRES_USER=empire_user
+      - POSTGRES_PASSWORD=empire_password
+    ports:
+      - "5432:5432"
+    networks:
+      - billionaire-network
+
+networks:
+  billionaire-network:
+    driver: bridge
+    labels:
+      - "consciousness.level=billionaire_consciousness"

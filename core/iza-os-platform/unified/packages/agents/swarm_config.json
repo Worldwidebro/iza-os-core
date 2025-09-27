@@ -1,0 +1,59 @@
+{
+  "master_orchestrator": {
+    "type": "coordinator",
+    "responsibilities": [
+      "Task distribution",
+      "Load balancing",
+      "Failure recovery",
+      "Performance monitoring"
+    ]
+  },
+  "specialized_agents": {
+    "ceo_agent": {
+      "domain": "strategic_planning",
+      "capabilities": [
+        "business_strategy",
+        "decision_making",
+        "resource_allocation"
+      ]
+    },
+    "cto_agent": {
+      "domain": "technical_oversight",
+      "capabilities": [
+        "architecture_design",
+        "technology_selection",
+        "code_review"
+      ]
+    },
+    "marketing_agent": {
+      "domain": "growth_strategies",
+      "capabilities": [
+        "market_analysis",
+        "campaign_optimization",
+        "user_acquisition"
+      ]
+    },
+    "operations_agent": {
+      "domain": "process_optimization",
+      "capabilities": [
+        "workflow_automation",
+        "efficiency_analysis",
+        "resource_management"
+      ]
+    },
+    "analytics_agent": {
+      "domain": "data_insights",
+      "capabilities": [
+        "data_analysis",
+        "reporting",
+        "predictive_modeling"
+      ]
+    }
+  },
+  "communication_protocols": {
+    "message_queue": "Redis",
+    "event_bus": "Apache Kafka",
+    "api_gateway": "FastAPI",
+    "load_balancer": "Nginx"
+  }
+}

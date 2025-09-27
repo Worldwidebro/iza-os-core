@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "standard": {
+      "format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    },
+    "detailed": {
+      "format": "%(asctime)s [%(levelname)s] %(name)s:%(lineno)d - %(funcName)s(): %(message)s",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    },
+    "json": {
+      "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
+      "format": "%(asctime)s %(name)s %(levelname)s %(message)s %(pathname)s %(lineno)d %(funcName)s"
+    },
+    "security": {
+      "format": "%(asctime)s [SECURITY] [%(levelname)s] %(name)s: %(message)s - IP:%(ip)s User:%(user)s Action:%(action)s",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    },
+    "audit": {
+      "format": "%(asctime)s [AUDIT] [%(levelname)s] %(name)s: %(message)s - User:%(user)s Resource:%(resource)s Action:%(action)s Result:%(result)s",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    }
+  },
+  "filters": {
+    "security_filter": {
+      "()": "memu.logging.SecurityFilter"
+    },
+    "audit_filter": {
+      "()": "memu.logging.AuditFilter"
+    },
+    "performance_filter": {
+      "()": "memu.logging.PerformanceFilter"
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "logging.StreamHandler",
+      "level": "INFO",
+      "formatter": "standard",
+      "stream": "ext://sys.stdout"
+    },
+    "console_debug": {
+      "class": "logging.StreamHandler",
+      "level": "DEBUG",
+      "formatter": "detailed",
+      "stream": "ext://sys.stdout"
+    },
+    "file_general": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "INFO",
+      "formatter": "detailed",
+      "filename": "/var/log/iza-os/dashboard.log",
+      "maxBytes": 10485760,
+      "backupCount": 10,
+      "encoding": "utf8"
+    },
+    "file_error": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "ERROR",
+      "formatter": "detailed",
+      "filename": "/var/log/iza-os/error.log",
+      "maxBytes": 10485760,
+      "backupCount": 5,
+      "encoding": "utf8"
+    },
+    "file_security": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "WARNING",
+      "formatter": "security",
+      "filename": "/var/log/iza-os/security.log",
+      "maxBytes": 10485760,
+      "backupCount": 20,
+      "encoding": "utf8",
+      "filters": ["security_filter"]
+    },
+    "file_audit": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "INFO",
+      "formatter": "audit",
+      "filename": "/var/log/iza-os/audit.log",
+      "maxBytes": 10485760,
+      "backupCount": 50,
+      "encoding": "utf8",
+      "filters": ["audit_filter"]
+    },
+    "file_performance": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "INFO",
+      "formatter": "json",
+      "filename": "/var/log/iza-os/performance.log",
+      "maxBytes": 52428800,
+      "backupCount": 5,
+      "encoding": "utf8",
+      "filters": ["performance_filter"]
+    },
+    "syslog": {
+      "class": "logging.handlers.SysLogHandler",
+      "level": "WARNING",
+      "formatter": "standard",
+      "address": ["localhost", 514],
+      "facility": "local0"
+    },
+    "email": {
+      "class": "logging.handlers.SMTPHandler",
+      "level": "ERROR",
+      "formatter": "detailed",
+      "mailhost": "localhost",
+      "fromaddr": "alerts@iza-os.com",
+      "toaddrs": ["admin@iza-os.com", "devops@iza-os.com"],
+      "subject": "IZA OS Dashboard Error Alert"
+    },
+    "webhook": {
+      "class": "memu.logging.WebhookHandler",
+      "level": "CRITICAL",
+      "formatter": "json",
+      "webhook_url": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK",
+      "timeout": 30
+    }
+  },
+  "loggers": {
+    "": {
+      "handlers": ["console", "file_general"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "memu": {
+      "handlers": ["console", "file_general", "file_error"],
+      "level": "DEBUG",
+      "propagate": false
+    },
+    "memu.security": {
+      "handlers": ["file_security", "syslog", "email"],
+      "level": "WARNING",
+      "propagate": false
+    },
+    "memu.audit": {
+      "handlers": ["file_audit"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "memu.performance": {
+      "handlers": ["file_performance"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "memu.n8n": {
+      "handlers": ["console", "file_general"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "memu.dashboard": {
+      "handlers": ["console", "file_general"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "memu.api": {
+      "handlers": ["console", "file_general"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "memu.monitoring": {
+      "handlers": ["console", "file_general"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "uvicorn": {
+      "handlers": ["console", "file_general"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "fastapi": {
+      "handlers": ["console", "file_general"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "sqlalchemy": {
+      "handlers": ["file_general"],
+      "level": "WARNING",
+      "propagate": false
+    },
+    "asyncio": {
+      "handlers": ["file_general"],
+      "level": "WARNING",
+      "propagate": false
+    },
+    "httpx": {
+      "handlers": ["file_general"],
+      "level": "WARNING",
+      "propagate": false
+    },
+    "aiohttp": {
+      "handlers": ["file_general"],
+      "level": "WARNING",
+      "propagate": false
+    }
+  },
+  "root": {
+    "handlers": ["console", "file_general"],
+    "level": "INFO"
+  },
+  "incremental": false,
+  "disable_existing_loggers": false
+}

@@ -1,0 +1,146 @@
+{
+  "start_time": "2025-09-20T00:46:24.414401",
+  "experiments": [
+    {
+      "name": "Network Latency Injection",
+      "type": "network_latency",
+      "severity": "medium",
+      "success": false,
+      "duration": 64.369231,
+      "recovery_time": 1.0794389247894287,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "Network Partition",
+      "type": "network_partition",
+      "severity": "high",
+      "success": true,
+      "duration": 124.476778,
+      "recovery_time": 1.082427740097046,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "API Service Failure",
+      "type": "service_failure",
+      "severity": "high",
+      "success": true,
+      "duration": 94.317323,
+      "recovery_time": 1.0709178447723389,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "Database Connection Failure",
+      "type": "database_failure",
+      "severity": "critical",
+      "success": true,
+      "duration": 124.388625,
+      "recovery_time": 1.0732378959655762,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "Redis Cache Failure",
+      "type": "cache_failure",
+      "severity": "medium",
+      "success": true,
+      "duration": 94.349766,
+      "recovery_time": 1.1158337593078613,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "CPU Exhaustion",
+      "type": "resource_exhaustion",
+      "severity": "high",
+      "success": true,
+      "duration": 184.402736,
+      "recovery_time": 1.0839171409606934,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "Memory Exhaustion",
+      "type": "resource_exhaustion",
+      "severity": "high",
+      "success": true,
+      "duration": 184.592269,
+      "recovery_time": 1.2867190837860107,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "Load Spike",
+      "type": "load_spike",
+      "severity": "medium",
+      "success": true,
+      "duration": 971.023211,
+      "recovery_time": 306.2726237773895,
+      "recommendations": [
+        "Implement faster recovery mechanisms",
+        "Optimize response times and implement caching",
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "External API Failure",
+      "type": "dependency_failure",
+      "severity": "medium",
+      "success": true,
+      "duration": 1332.973157,
+      "recovery_time": 306.9909999370575,
+      "recommendations": [
+        "Implement faster recovery mechanisms",
+        "Optimize response times and implement caching",
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    },
+    {
+      "name": "Random Service Failures",
+      "type": "random_failure",
+      "severity": "high",
+      "success": true,
+      "duration": 1602.377713,
+      "recovery_time": 1.085866928100586,
+      "recommendations": [
+        "Improve error handling and implement circuit breakers",
+        "Optimize memory usage and implement memory management",
+        "Improve service reliability and implement health checks"
+      ]
+    }
+  ],
+  "overall_resilience_score": 90.0,
+  "recommendations": [
+    "Address 1 failed experiments",
+    "Focus on improving network_latency resilience (1 failures)",
+    "Improve recovery times for 2 experiments"
+  ],
+  "end_time": "2025-09-20T02:06:01.688240"
+}

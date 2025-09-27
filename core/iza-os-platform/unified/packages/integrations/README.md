@@ -1,0 +1,3 @@
+# Integrations/
+
+Third-party integrations

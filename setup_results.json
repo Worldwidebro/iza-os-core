@@ -1,0 +1,119 @@
+{
+  "start_time": "2025-09-20T00:41:13.913759",
+  "base_path": "/Users/divinejohns/memU/memu",
+  "steps": [
+    {
+      "step": "prerequisites",
+      "status": "completed",
+      "success": true,
+      "duration": 0.000371,
+      "errors": [],
+      "recommendations": [
+        "Prerequisites check passed"
+      ]
+    },
+    {
+      "step": "infrastructure",
+      "status": "failed",
+      "success": false,
+      "duration": 306.033904,
+      "errors": [
+        "Failed to start services from docker-compose.yml: time=\"2025-09-19T20:41:14-04:00\" level=warning msg=\"/Users/divinejohns/memU/memu/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion\"\nDockerfile:44\n\n--------------------\n\n  42 |     \n\n  43 |     # Copy nginx configuration\n\n  44 | >>> COPY nginx.conf /etc/nginx/conf.d/default.conf\n\n  45 |     \n\n  46 |     # Expose port\n\n--------------------\n\ntarget frontend: failed to solve: failed to compute cache key: failed to calculate checksum of ref t4mt7amt4cs5dzzwd1r1qbdkv::iqit3dg3xm839soyleiyo9n5u: \"/nginx.conf\": not found\n\n\n\nView build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/rrwhycgf11fj3cvuu46tanpek\n\n",
+        "Failed to start services from docker-compose.observability.yml: time=\"2025-09-19T20:41:16-04:00\" level=warning msg=\"/Users/divinejohns/memU/memu/docker-compose.observability.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion\"\nfailed to execute bake: read |0: file already closed\n",
+        "Missing services: ['postgres', 'redis', 'api', 'frontend', 'nginx', 'prometheus', 'grafana', 'alertmanager', 'jaeger']"
+      ],
+      "recommendations": []
+    },
+    {
+      "step": "monitoring",
+      "status": "failed",
+      "success": false,
+      "duration": 0.005025,
+      "errors": [
+        "Monitoring service prometheus not accessible",
+        "Monitoring service alertmanager not accessible",
+        "Insufficient monitoring services accessible"
+      ],
+      "recommendations": []
+    },
+    {
+      "step": "observability",
+      "status": "failed",
+      "success": false,
+      "duration": 0.003923,
+      "errors": [
+        "Observability services not fully accessible"
+      ],
+      "recommendations": []
+    },
+    {
+      "step": "compliance",
+      "status": "completed",
+      "success": true,
+      "duration": 5.4e-05,
+      "errors": [],
+      "recommendations": [
+        "Compliance automation is operational"
+      ]
+    },
+    {
+      "step": "chaos_engineering",
+      "status": "failed",
+      "success": false,
+      "duration": 0.056592,
+      "errors": [
+        "System not ready for chaos testing"
+      ],
+      "recommendations": []
+    },
+    {
+      "step": "task_orchestration",
+      "status": "completed",
+      "success": true,
+      "duration": 5.1e-05,
+      "errors": [],
+      "recommendations": [
+        "Task orchestration is operational"
+      ]
+    },
+    {
+      "step": "validation",
+      "status": "failed",
+      "success": false,
+      "duration": 0.42754,
+      "errors": [
+        "Validation score too low: 44.0"
+      ],
+      "recommendations": []
+    },
+    {
+      "step": "optimization",
+      "status": "completed",
+      "success": true,
+      "duration": 2.017856,
+      "errors": [],
+      "recommendations": [
+        "High memory usage detected - consider memory optimization",
+        "Slow response time for prometheus - consider optimization",
+        "Optimization analysis completed"
+      ]
+    }
+  ],
+  "overall_success": false,
+  "total_duration": 308.594902,
+  "health_score": 20.0,
+  "recommendations": [
+    "Address 5 failed setup steps",
+    "Fix infrastructure: Failed to start services from docker-compose.yml: time=\"2025-09-19T20:41:14-04:00\" level=warning msg=\"/Users/divinejohns/memU/memu/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion\"\nDockerfile:44\n\n--------------------\n\n  42 |     \n\n  43 |     # Copy nginx configuration\n\n  44 | >>> COPY nginx.conf /etc/nginx/conf.d/default.conf\n\n  45 |     \n\n  46 |     # Expose port\n\n--------------------\n\ntarget frontend: failed to solve: failed to compute cache key: failed to calculate checksum of ref t4mt7amt4cs5dzzwd1r1qbdkv::iqit3dg3xm839soyleiyo9n5u: \"/nginx.conf\": not found\n\n\n\nView build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/rrwhycgf11fj3cvuu46tanpek\n\n",
+    "Fix monitoring: Monitoring service prometheus not accessible",
+    "Fix observability: Observability services not fully accessible",
+    "Fix chaos_engineering: System not ready for chaos testing",
+    "Fix validation: Validation score too low: 44.0",
+    "System health score is below 80% - immediate attention required",
+    "Monitor system performance and resource usage",
+    "Run regular compliance checks",
+    "Schedule periodic chaos engineering tests",
+    "Keep all components updated and patched"
+  ],
+  "end_time": "2025-09-20T00:46:22.532554"
+}

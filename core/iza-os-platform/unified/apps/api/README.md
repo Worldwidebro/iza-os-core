@@ -1,0 +1,3 @@
+# Api/
+
+Central API gateway

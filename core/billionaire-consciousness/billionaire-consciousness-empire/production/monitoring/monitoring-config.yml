@@ -1,0 +1,45 @@
+# Production Monitoring Configuration
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - "empire_rules.yml"
+
+scrape_configs:
+  - job_name: 'iza-os-services'
+    static_configs:
+      - targets: ['iza-os-api-gateway:80', 'iza-os-backend:3000', 'iza-os-frontend:3004']
+    metrics_path: /metrics
+    scrape_interval: 10s
+
+  - job_name: 'consciousness-os-services'
+    static_configs:
+      - targets: ['consciousness-os-api:8080', 'consciousness-os-dashboard:3000']
+    metrics_path: /metrics
+    scrape_interval: 10s
+
+  - job_name: 'genix-bank-services'
+    static_configs:
+      - targets: ['genix-bank-api:8080', 'genix-bank-dashboard:3000']
+    metrics_path: /metrics
+    scrape_interval: 10s
+
+  - job_name: 'ai-services'
+    static_configs:
+      - targets: ['ollama-ai:11434']
+    metrics_path: /metrics
+    scrape_interval: 10s
+
+  - job_name: 'database-services'
+    static_configs:
+      - targets: ['postgresql:5432', 'redis:6379']
+    metrics_path: /metrics
+    scrape_interval: 10s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - alertmanager:9093

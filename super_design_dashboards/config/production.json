@@ -1,0 +1,107 @@
+{
+  "environment": "production",
+  "debug": false,
+  "logging": {
+    "level": "warn",
+    "console": false,
+    "file": true,
+    "filePath": "/var/log/iza-os/production.log",
+    "rotation": {
+      "enabled": true,
+      "maxSize": "100MB",
+      "maxFiles": 10
+    }
+  },
+  "security": {
+    "csp": {
+      "reportOnly": false,
+      "directives": {
+        "default-src": ["'self'"],
+        "script-src": ["'self'", "https://cdnjs.cloudflare.com"],
+        "style-src": ["'self'", "https://fonts.googleapis.com"],
+        "img-src": ["'self'", "data:", "https:"],
+        "font-src": ["'self'", "https://fonts.gstatic.com"],
+        "connect-src": ["'self'", "wss:", "https://api.iza-os.com"],
+        "frame-ancestors": ["'none'"],
+        "base-uri": ["'self'"],
+        "form-action": ["'self'"]
+      }
+    },
+    "cors": {
+      "origin": ["https://iza-os.com", "https://dashboard.iza-os.com"],
+      "credentials": true
+    },
+    "rateLimiting": {
+      "enabled": true,
+      "windowMs": 60000,
+      "max": 100,
+      "skipSuccessfulRequests": true
+    },
+    "authentication": {
+      "requireAuth": true,
+      "sessionTimeout": 1800000,
+      "refreshToken": true
+    },
+    "encryption": {
+      "enabled": true,
+      "algorithm": "AES-256-GCM"
+    }
+  },
+  "performance": {
+    "caching": {
+      "enabled": true,
+      "maxAge": 86400000,
+      "etag": true
+    },
+    "compression": {
+      "enabled": true,
+      "level": 6
+    },
+    "minification": {
+      "enabled": true,
+      "removeComments": true,
+      "collapseWhitespace": true
+    },
+    "optimization": {
+      "lazyLoading": true,
+      "preloading": true,
+      "criticalCSS": true
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics": true,
+    "alerts": true,
+    "endpoints": {
+      "health": "/health",
+      "metrics": "/metrics",
+      "status": "/status"
+    },
+    "external": {
+      "sentry": {
+        "enabled": true,
+        "dsn": "https://your-sentry-dsn@sentry.io/project"
+      },
+      "datadog": {
+        "enabled": true,
+        "apiKey": "your-datadog-api-key"
+      }
+    }
+  },
+  "features": {
+    "hotReload": false,
+    "sourceMaps": false,
+    "debugger": false,
+    "profiler": false
+  },
+  "external": {
+    "apiUrl": "https://api.iza-os.com",
+    "websocketUrl": "wss://ws.iza-os.com",
+    "cdnUrl": "https://cdn.iza-os.com"
+  },
+  "scaling": {
+    "loadBalancing": true,
+    "autoScaling": true,
+    "healthChecks": true
+  }
+}

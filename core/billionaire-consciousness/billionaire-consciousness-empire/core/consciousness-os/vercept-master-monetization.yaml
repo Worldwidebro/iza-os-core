@@ -1,0 +1,389 @@
+# Vercept Job: Master Monetization Orchestrator
+
+name: "master-monetization-orchestrator"
+description: "Autonomous Monetization Orchestrator - converts ideas into revenue repeatedly"
+version: "1.0.0"
+
+# Environment variables
+env:
+  GITHUB_ORG: "Worldwidebro"
+  OBSIDIAN_VAULT_PATH: "/notes/obsidian"
+  APPLE_NOTES_EXPORT: "/notes/apple.zip"
+  EMBEDDINGS_INDEX: "80-second-brain/embeddings_index.json"
+  REGISTRY_PATH: "00-meta/registry.json"
+  NEO4J_URI: "bolt://localhost:7687"
+  NEO4J_USER: "neo4j"
+  NEO4J_PASSWORD: "consciousness"
+  CHROMA_HOST: "localhost"
+  CHROMA_PORT: "8000"
+  OPENAI_API_KEY: "${OPENAI_API_KEY}"
+  ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}"
+
+# Job configuration
+job:
+  type: "orchestration"
+  timeout: "2h"
+  retries: 3
+  concurrency: 5
+
+# Steps
+steps:
+  # Step 1: Initialize and scan sources
+  - name: "initialize-sources"
+    type: "claude"
+    prompt: |
+      You are the Master Monetization Orchestrator. 
+      
+      Sources to analyze:
+      - GitHub org: ${GITHUB_ORG}
+      - Obsidian vault: ${OBSIDIAN_VAULT_PATH}
+      - Apple Notes export: ${APPLE_NOTES_EXPORT}
+      - Embeddings index: ${EMBEDDINGS_INDEX}
+      - Registry: ${REGISTRY_PATH}
+      
+      Task: Scan all sources and identify the top 10 most monetizable ideas.
+      
+      Output format:
+      {
+        "ideas": [
+          {
+            "id": "idea_1",
+            "title": "Idea Title",
+            "description": "Brief description",
+            "commercial_potential": 1-10,
+            "feasibility": 1-10,
+            "time_to_mvp": "X days",
+            "estimated_arr_90_days": "$X",
+            "source": "obsidian/notes/github",
+            "tags": ["tag1", "tag2"]
+          }
+        ],
+        "summary": "Top 3 ideas summary",
+        "next_actions": ["action1", "action2", "action3"]
+      }
+    
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 4000
+    temperature: 0.3
+
+  # Step 2: Validate top 3 ideas
+  - name: "validate-top-ideas"
+    type: "claude"
+    prompt: |
+      Based on the top 3 ideas from step 1, create detailed validation plans.
+      
+      For each idea, produce:
+      1. MVP specification (features, tech stack, timeline)
+      2. Landing page mockup (copy, design notes, CTA)
+      3. Paid acquisition plan ($0-$200/mo budget)
+      4. Success metrics and KPIs
+      5. Risk assessment and mitigation
+      
+      Output format:
+      {
+        "validated_ideas": [
+          {
+            "id": "idea_1",
+            "mvp_spec": {
+              "features": ["feature1", "feature2"],
+              "tech_stack": ["tech1", "tech2"],
+              "timeline": "X days",
+              "cost_estimate": "$X"
+            },
+            "landing_page": {
+              "headline": "Compelling headline",
+              "subheadline": "Supporting text",
+              "cta": "Call to action",
+              "design_notes": "Design guidance"
+            },
+            "acquisition_plan": {
+              "channels": ["channel1", "channel2"],
+              "budget": "$X/month",
+              "target_cac": "$X",
+              "conversion_target": "X%"
+            },
+            "success_metrics": {
+              "mrr_target_60_days": "$X",
+              "user_target_30_days": "X",
+              "conversion_target": "X%"
+            },
+            "risks": ["risk1", "risk2"],
+            "mitigation": ["mitigation1", "mitigation2"]
+          }
+        ]
+      }
+    
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 6000
+    temperature: 0.2
+
+  # Step 3: Generate MVP scaffolds
+  - name: "generate-mvp-scaffolds"
+    type: "claude"
+    prompt: |
+      For each validated idea, generate a complete MVP scaffold including:
+      
+      1. Repository structure
+      2. Core code files (main functionality)
+      3. Docker configuration
+      4. CI/CD pipeline
+      5. Tests
+      6. Documentation
+      7. Deployment scripts
+      
+      Output format:
+      {
+        "mvp_scaffolds": [
+          {
+            "id": "idea_1",
+            "repo_structure": {
+              "files": [
+                {
+                  "path": "src/main.py",
+                  "content": "Python code here",
+                  "description": "Main application file"
+                }
+              ]
+            },
+            "docker": {
+              "dockerfile": "Dockerfile content",
+              "docker_compose": "docker-compose.yml content"
+            },
+            "ci_cd": {
+              "github_actions": ".github/workflows/ci.yml content",
+              "deployment": "deploy.sh content"
+            },
+            "tests": {
+              "unit_tests": "test_main.py content",
+              "integration_tests": "test_integration.py content"
+            },
+            "documentation": {
+              "readme": "README.md content",
+              "api_docs": "API documentation"
+            }
+          }
+        ]
+      }
+    
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 8000
+    temperature: 0.1
+
+  # Step 4: Create landing pages
+  - name: "create-landing-pages"
+    type: "claude"
+    prompt: |
+      For each MVP, create a complete landing page including:
+      
+      1. HTML structure
+      2. CSS styling (Tailwind CSS)
+      3. JavaScript functionality
+      4. Contact forms
+      5. Analytics integration
+      6. SEO optimization
+      
+      Output format:
+      {
+        "landing_pages": [
+          {
+            "id": "idea_1",
+            "html": "<html>...</html>",
+            "css": "/* CSS styles */",
+            "js": "// JavaScript code",
+            "forms": {
+              "contact": "Contact form HTML",
+              "newsletter": "Newsletter signup HTML"
+            },
+            "analytics": {
+              "google_analytics": "GA4 code",
+              "mixpanel": "Mixpanel code"
+            },
+            "seo": {
+              "title": "SEO title",
+              "description": "Meta description",
+              "keywords": "SEO keywords"
+            }
+          }
+        ]
+      }
+    
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 6000
+    temperature: 0.2
+
+  # Step 5: Generate deployment commands
+  - name: "generate-deployment-commands"
+    type: "claude"
+    prompt: |
+      For each MVP, generate the exact commands needed to deploy and measure:
+      
+      1. GitHub repository creation
+      2. Code deployment
+      3. Landing page deployment
+      4. Monitoring setup
+      5. Analytics configuration
+      6. Warp quick actions
+      
+      Output format:
+      {
+        "deployment_commands": [
+          {
+            "id": "idea_1",
+            "github_setup": [
+              "gh repo create Worldwidebro/idea-1 --public",
+              "git clone https://github.com/Worldwidebro/idea-1.git",
+              "cd idea-1"
+            ],
+            "code_deployment": [
+              "docker build -t idea-1 .",
+              "docker run -d -p 8000:8000 idea-1",
+              "docker-compose up -d"
+            ],
+            "landing_deployment": [
+              "vercel --prod",
+              "netlify deploy --prod"
+            ],
+            "monitoring": [
+              "curl -X POST http://localhost:8000/health",
+              "curl -X GET http://localhost:8000/metrics"
+            ],
+            "warp_actions": [
+              "warp quick-action 'deploy-idea-1' 'cd idea-1 && docker-compose up -d'",
+              "warp quick-action 'monitor-idea-1' 'curl http://localhost:8000/health'"
+            ]
+          }
+        ]
+      }
+    
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 4000
+    temperature: 0.1
+
+  # Step 6: Update knowledge graph
+  - name: "update-knowledge-graph"
+    type: "claude"
+    prompt: |
+      Update the Neo4j knowledge graph with the new ideas and their relationships:
+      
+      1. Create idea nodes
+      2. Create relationship edges
+      3. Update tags and metadata
+      4. Link to existing knowledge
+      
+      Output format:
+      {
+        "cypher_queries": [
+          "CREATE (i:Idea {id: 'idea_1', title: 'Idea Title', status: 'MVP_candidate'})",
+          "CREATE (i)-[:RELATES_TO]->(e:ExistingIdea)",
+          "CREATE (i)-[:TAGGED_WITH]->(t:Tag {name: 'tag1'})"
+        ],
+        "updated_tags": ["MVP_candidate", "high_potential", "validated"],
+        "relationships": [
+          {
+            "from": "idea_1",
+            "to": "existing_idea_1",
+            "type": "RELATES_TO"
+          }
+        ]
+      }
+    
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 3000
+    temperature: 0.1
+
+  # Step 7: Generate final report
+  - name: "generate-final-report"
+    type: "claude"
+    prompt: |
+      Generate a comprehensive final report including:
+      
+      1. Executive summary
+      2. Top 3 ideas with business cases
+      3. Implementation roadmap
+      4. Success metrics
+      5. Next actions
+      6. Investor-ready summary
+      
+      Output format:
+      {
+        "executive_summary": "One paragraph summary",
+        "top_ideas": [
+          {
+            "id": "idea_1",
+            "business_case": "One page business case",
+            "implementation_roadmap": "7-day checklist",
+            "success_metrics": "KPIs and targets",
+            "next_actions": ["action1", "action2"]
+          }
+        ],
+        "investor_summary": "One page investor-ready summary",
+        "overall_roi": "Expected ROI and timeline",
+        "risk_assessment": "Top risks and mitigations"
+      }
+    
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 5000
+    temperature: 0.2
+
+# Output configuration
+output:
+  format: "json"
+  destination: "results/master-monetization-results.json"
+  include_intermediate: true
+
+# Monitoring and alerts
+monitoring:
+  success_criteria:
+    - "All 7 steps completed successfully"
+    - "At least 3 monetizable ideas identified"
+    - "All MVPs have complete scaffolds"
+    - "All landing pages generated"
+    - "Knowledge graph updated"
+  
+  alerts:
+    - type: "slack"
+      webhook: "${SLACK_WEBHOOK_URL}"
+      message: "Master Monetization Orchestrator completed successfully"
+    
+    - type: "email"
+      to: "${ADMIN_EMAIL}"
+      subject: "Monetization Orchestrator Results"
+      template: "monetization_results.html"
+
+# Dependencies
+dependencies:
+  - "neo4j"
+  - "chroma"
+  - "github-cli"
+  - "docker"
+  - "vercel-cli"
+
+# Scheduling
+schedule:
+  frequency: "daily"
+  time: "06:00"
+  timezone: "UTC"
+  enabled: true
+
+# Resource requirements
+resources:
+  cpu: "2 cores"
+  memory: "4GB"
+  storage: "10GB"
+  network: "high bandwidth"
+
+# Security
+security:
+  secrets:
+    - "OPENAI_API_KEY"
+    - "ANTHROPIC_API_KEY"
+    - "GITHUB_TOKEN"
+    - "NEO4J_PASSWORD"
+  
+  permissions:
+    - "read:github"
+    - "write:github"
+    - "read:filesystem"
+    - "write:filesystem"
+    - "read:neo4j"
+    - "write:neo4j"

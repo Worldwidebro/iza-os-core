@@ -1,0 +1,48 @@
+{
+  "name": "memu-ecosystem-mcp-server",
+  "version": "2.0.0",
+  "description": "Unified MCP server for $698B+ memU ecosystem access",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test.js",
+    "health-check": "node monitoring/health-check.js"
+  },
+  "keywords": [
+    "mcp",
+    "ecosystem",
+    "billionaire-consciousness",
+    "iza-enterprise",
+    "worldwidebro",
+    "genix-bank",
+    "ai-agents",
+    "mcp-hub",
+    "698b-ecosystem"
+  ],
+  "author": "IZA OS Enterprise",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "winston": "^3.11.0",
+    "node-cron": "^3.0.3",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Worldwidebro/memu-ecosystem"
+  },
+  "bugs": {
+    "url": "https://github.com/Worldwidebro/memu-ecosystem/issues"
+  },
+  "homepage": "https://github.com/Worldwidebro/memu-ecosystem#readme"
+}

@@ -1,0 +1,194 @@
+{
+  "dashboard": {
+    "title": "🌟 IZA OS Main Dashboard",
+    "subtitle": "Comprehensive ecosystem overview and control center",
+    "stats": [
+      {
+        "number": "27+",
+        "label": "Total Services"
+      },
+      {
+        "number": "382",
+        "label": "ACE Businesses"
+      },
+      {
+        "number": "$1.4B+",
+        "label": "Ecosystem Value"
+      },
+      {
+        "number": "95%",
+        "label": "Automation Level"
+      },
+      {
+        "number": "2,056+",
+        "label": "N8N Workflows"
+      },
+      {
+        "number": "211",
+        "label": "Repositories"
+      }
+    ],
+    "cards": [
+      {
+        "id": "business-operations",
+        "icon": "🏢",
+        "title": "Business Operations",
+        "description": "Complete business management interface for AI Boss Holdings with 382 ACE businesses, equity tracking, and revenue monitoring.",
+        "links": [
+          {
+            "url": "http://localhost:4000",
+            "text": "Business Dashboard (Port 4000)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "http://localhost:5000",
+            "text": "GenixBank Financial (Port 5000)",
+            "status": "degraded",
+            "external": true
+          },
+          {
+            "url": "PROJECT_PORTFOLIO_DASHBOARD.html",
+            "text": "Project Portfolio Dashboard",
+            "status": "online",
+            "external": false
+          }
+        ]
+      },
+      {
+        "id": "ai-automation",
+        "icon": "🤖",
+        "title": "AI & Automation",
+        "description": "Advanced AI systems and automation orchestration including 2,056+ N8N workflows and 200+ AI agents.",
+        "links": [
+          {
+            "url": "http://localhost:5678",
+            "text": "N8N Workflow Engine (Port 5678)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "http://localhost:9000",
+            "text": "Web Automation (Port 9000)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "http://localhost:11434",
+            "text": "Ollama AI (Port 11434)",
+            "status": "online",
+            "external": true
+          }
+        ]
+      },
+      {
+        "id": "ecosystem-services",
+        "icon": "🌐",
+        "title": "Ecosystem Services",
+        "description": "Core ecosystem infrastructure and service management with real-time monitoring and health diagnostics.",
+        "links": [
+          {
+            "url": "http://localhost:8000",
+            "text": "Master Dashboard Hub (Port 8000)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "http://localhost:8001",
+            "text": "Execution Dashboard (Port 8001)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "ecosystem_visualization.html",
+            "text": "Ecosystem Visualization",
+            "status": "online",
+            "external": false
+          }
+        ]
+      },
+      {
+        "id": "design-development",
+        "icon": "🎨",
+        "title": "Design & Development",
+        "description": "Design system, development tools, and interactive environments for ecosystem development.",
+        "links": [
+          {
+            "url": "http://localhost:7001",
+            "text": "Traycer Design System (Port 7001)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "http://localhost:8888",
+            "text": "Jupyter Lab (Port 8888)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "http://localhost:9277",
+            "text": "Stable Diffusion (Port 9277)",
+            "status": "degraded",
+            "external": true
+          }
+        ]
+      },
+      {
+        "id": "analytics-monitoring",
+        "icon": "📊",
+        "title": "Analytics & Monitoring",
+        "description": "Comprehensive analytics, monitoring, and reporting systems for ecosystem performance tracking.",
+        "links": [
+          {
+            "url": "http://localhost:3001",
+            "text": "Unified Dashboard (Port 3001)",
+            "status": "online",
+            "external": true
+          },
+          {
+            "url": "IZA_OS_DYNAMIC_ECOSYSTEM_DASHBOARD.html",
+            "text": "Dynamic Ecosystem Dashboard",
+            "status": "online",
+            "external": false
+          },
+          {
+            "url": "memu/INTEGRATION_DASHBOARD.html",
+            "text": "Integration Dashboard",
+            "status": "online",
+            "external": false
+          }
+        ]
+      },
+      {
+        "id": "cloud-deployment",
+        "icon": "🚀",
+        "title": "Cloud Deployment",
+        "description": "Cloud deployment tools, container orchestration, and infrastructure management for scalable operations.",
+        "links": [
+          {
+            "url": "docker-compose.yml",
+            "text": "Docker Compose Configuration",
+            "status": "online",
+            "external": false
+          },
+          {
+            "url": "cloud-deployment.sh",
+            "text": "Cloud Deployment Script",
+            "status": "online",
+            "external": false
+          },
+          {
+            "url": "k8s/",
+            "text": "Kubernetes Configurations",
+            "status": "online",
+            "external": false
+          }
+        ]
+      }
+    ],
+    "footer": {
+      "title": "🌟 IZA OS Main Dashboard | Comprehensive Ecosystem Control Center",
+      "stats": "Total Services: 27+ | Health Score: 57.1%"
+    }
+  }
+}

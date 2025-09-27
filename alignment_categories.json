@@ -1,0 +1,175 @@
+{
+  "core": {
+    "id": "core",
+    "name": "Core Components",
+    "description": "Essential system components and core functionality",
+    "schema_type": "SoftwareApplication",
+    "parent_category": null,
+    "files": [
+      "__init___py"
+    ],
+    "subcategories": [
+      "dashboard",
+      "api",
+      "database"
+    ]
+  },
+  "dashboard": {
+    "id": "dashboard",
+    "name": "Dashboard System",
+    "description": "Glass-morphism dashboard components and React architecture",
+    "schema_type": "SoftwareApplication",
+    "parent_category": "core",
+    "files": [
+      "super_design_dashboards_tsconfig_node_json",
+      "super_design_dashboards_validate-dashboard_py",
+      "super_design_dashboards_index_html",
+      "super_design_dashboards_tailwind_config_js",
+      "super_design_dashboards_automation-bot-integration_js",
+      "super_design_dashboards_dashboard-monitoring-integration_js",
+      "super_design_dashboards_content-discovery-integration_js",
+      "super_design_dashboards_README-REACT_md",
+      "super_design_dashboards__pre-commit-config_yaml",
+      "super_design_dashboards_REFACTORING_SUMMARY_md",
+      "super_design_dashboards_Makefile",
+      "super_design_dashboards_package-react_json",
+      "super_design_dashboards_dashboard-styles_css",
+      "super_design_dashboards_dashboard-data_json",
+      "super_design_dashboards_security-config_json",
+      "super_design_dashboards_dashboard-script_js",
+      "super_design_dashboards_security-compliance-integration_js",
+      "super_design_dashboards___init___py",
+      "super_design_dashboards_test-suite_js",
+      "super_design_dashboards_OPERATIONS_GUIDE_md",
+      "super_design_dashboards_nlp-processing-integration_js",
+      "super_design_dashboards_search-intelligence-integration_js",
+      "super_design_dashboards_README_md",
+      "super_design_dashboards_package-lock_json",
+      "super_design_dashboards_package_json",
+      "super_design_dashboards_tsconfig_json",
+      "super_design_dashboards_iza_os_main_dashboard_html",
+      "super_design_dashboards_SECURITY_GUIDE_md",
+      "super_design_dashboards_vite_config_ts",
+      "super_design_dashboards_vitest_config_ts",
+      "super_design_dashboards_monitoring-config_json",
+      "super_design_dashboards_config_staging_json",
+      "super_design_dashboards_config_testing_json",
+      "super_design_dashboards_config_production_json",
+      "super_design_dashboards_config_development_json",
+      "super_design_dashboards_src_utils_performance_tsx",
+      "super_design_dashboards_src_utils_security_tsx",
+      "super_design_dashboards_src_hooks_useAgentSystem_ts"
+    ],
+    "subcategories": [
+      "components",
+      "hooks",
+      "utils"
+    ]
+  },
+  "components": {
+    "id": "components",
+    "name": "UI Components",
+    "description": "Reusable React components with glass-morphism design",
+    "schema_type": "SoftwareApplication",
+    "parent_category": "dashboard",
+    "files": [
+      "super_design_dashboards_src_components_StatsGrid_tsx",
+      "super_design_dashboards_src_components_Confetti_tsx",
+      "super_design_dashboards_src_components_AgentCard_tsx",
+      "super_design_dashboards_src_components_Footer_tsx",
+      "super_design_dashboards_src_components_AgentDashboard_tsx",
+      "super_design_dashboards_src_components_Header_tsx",
+      "super_design_dashboards_src_components_AgentFlow_tsx",
+      "super_design_dashboards_src_components_ui_LoadingSpinner_tsx",
+      "super_design_dashboards_src_components___tests___AgentComponents_test_tsx"
+    ],
+    "subcategories": [
+      "ui",
+      "forms",
+      "navigation"
+    ]
+  },
+  "integrations": {
+    "id": "integrations",
+    "name": "System Integrations",
+    "description": "External system integrations and API connections",
+    "schema_type": "SoftwareApplication",
+    "parent_category": "core",
+    "files": [
+      "test_integration_complete_py",
+      "complete_n8n_workflow_integration_py"
+    ],
+    "subcategories": [
+      "n8n",
+      "apis",
+      "monitoring"
+    ]
+  },
+  "configurations": {
+    "id": "configurations",
+    "name": "Configuration Files",
+    "description": "System configuration and environment settings",
+    "schema_type": "CreativeWork",
+    "parent_category": "core",
+    "files": [
+      "alignment_categories_json",
+      "alignment_nodes_json",
+      "logging-config_json"
+    ],
+    "subcategories": [
+      "env",
+      "json",
+      "yaml"
+    ]
+  },
+  "documentation": {
+    "id": "documentation",
+    "name": "Documentation",
+    "description": "Project documentation and guides",
+    "schema_type": "CreativeWork",
+    "parent_category": "core",
+    "files": [
+      "FINAL_PROJECT_COMPLETION_CERTIFICATE_md"
+    ],
+    "subcategories": [
+      "guides",
+      "api_docs",
+      "readmes"
+    ]
+  },
+  "testing": {
+    "id": "testing",
+    "name": "Testing Framework",
+    "description": "Test suites and quality assurance",
+    "schema_type": "CreativeWork",
+    "parent_category": "core",
+    "files": [],
+    "subcategories": [
+      "unit_tests",
+      "integration_tests",
+      "e2e_tests"
+    ]
+  },
+  "assets": {
+    "id": "assets",
+    "name": "Static Assets",
+    "description": "CSS, images, fonts, and other static resources",
+    "schema_type": "CreativeWork",
+    "parent_category": "core",
+    "files": [
+      "super_design_dashboards_integrate-search_js",
+      "super_design_dashboards_modern-search-implementation_js",
+      "super_design_dashboards_ecosystem-health-monitoring_js",
+      "super_design_dashboards_bot-communication-protocol_js",
+      "super_design_dashboards_src_App_tsx",
+      "super_design_dashboards_src_main_tsx",
+      "super_design_dashboards_src_index_css",
+      "super_design_dashboards_src_test_setup_ts"
+    ],
+    "subcategories": [
+      "styles",
+      "images",
+      "fonts"
+    ]
+  }
+}

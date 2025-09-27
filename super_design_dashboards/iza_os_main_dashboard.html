@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' http://localhost:*; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="description" content="IZA OS Main Dashboard - Comprehensive ecosystem overview and control center">
+    <meta name="keywords" content="IZA OS, dashboard, ecosystem, automation, AI, enterprise">
+    <meta name="author" content="IZA OS Development Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="IZA OS Main Dashboard">
+    <meta property="og:description" content="Comprehensive ecosystem overview and control center">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iza-os.com/dashboard">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IZA OS Main Dashboard">
+    <meta name="twitter:description" content="Comprehensive ecosystem overview and control center">
+    
+    <title>IZA OS Main Dashboard</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="dashboard-styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="dashboard-script.js" as="script">
+    <link rel="preload" href="dashboard-data.json" as="fetch" crossorigin>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header Section -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon" aria-hidden="true">🌟</span>
+                    <span class="logo-text">IZA OS</span>
+                </div>
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#dashboard" class="nav-link" aria-current="page">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services" class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#monitoring" class="nav-link">Monitoring</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#settings" class="nav-link">Settings</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="refresh-btn" aria-label="Refresh dashboard data">
+                        <span aria-hidden="true">🔄</span>
+                        Refresh
+                    </button>
+                    <button class="btn btn-primary" id="settings-btn" aria-label="Open settings">
+                        <span aria-hidden="true">⚙️</span>
+                        Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        <div class="container">
+            <!-- Main Stats Section -->
+            <section class="main-stats" aria-labelledby="stats-heading">
+                <h2 id="stats-heading" class="section-heading">Ecosystem Overview</h2>
+                <div class="stats-grid" role="group" aria-label="Ecosystem statistics">
+                    <!-- Stats will be dynamically populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Dashboard Grid Section -->
+            <section class="dashboard-section" aria-labelledby="dashboard-heading">
+                <h2 id="dashboard-heading" class="section-heading">Service Dashboards</h2>
+                <div class="dashboard-grid" role="group" aria-label="Service dashboard cards">
+                    <!-- Dashboard cards will be dynamically populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Loading Indicator -->
+            <div id="loading-indicator" class="loading-indicator" role="status" aria-live="polite" aria-label="Loading dashboard data">
+                <div class="spinner" aria-hidden="true"></div>
+                <span>Loading dashboard data...</span>
+            </div>
+
+            <!-- Error Container -->
+            <div id="error-container" class="error-container" role="alert" aria-live="assertive" aria-label="Error messages">
+                <!-- Error messages will be dynamically populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-title">🌟 IZA OS Main Dashboard | Comprehensive Ecosystem Control Center</p>
+                    <p class="footer-stats">Total Services: 27+ | Health Score: 57.1% | Last Updated: <span id="timestamp">--</span></p>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy" class="footer-link">Privacy Policy</a>
+                    <a href="#terms" class="footer-link">Terms of Service</a>
+                    <a href="#support" class="footer-link">Support</a>
+                    <a href="#documentation" class="footer-link">Documentation</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IZA OS Development Team. All rights reserved.</p>
+                <p class="version-info">Version 2.0.0 | Built with enterprise-grade security and performance</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="dashboard-script.js"></script>
+    
+    <!-- Service Worker Registration (if available) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+    
+    <!-- Analytics and Monitoring (if enabled) -->
+    <script>
+        // Initialize analytics and monitoring
+        window.addEventListener('load', () => {
+            if (window.izaDashboard) {
+                console.log('IZA OS Dashboard initialized successfully');
+            }
+        });
+    </script>
+</body>
+</html>

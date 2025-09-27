@@ -1,0 +1,50 @@
+{
+  "start_time": "2025-09-20T00:41:13.619302+00:00",
+  "base_path": "/Users/divinejohns/memU/memu",
+  "phases": {
+    "setup": {
+      "success": false,
+      "error": "/Users/divinejohns/memU/memu/complete_setup_orchestrator.py:89: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  self.start_time = datetime.utcnow()\n/Users/divinejohns/memU/memu/complete_setup_orchestrator.py:233: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  start_time = datetime.utcnow()\n/Users/divinejohns/memU/memu/complete_setup_orchestrator.py:269: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result.end_time = datetime.utcnow()\n{\"event\": \"Services readiness timeout exceeded\", \"logger\": \"__main__\", \"level\": \"warning\", \"timestamp\": \"2025-09-20T00:46:19.918887Z\"}\n/Users/divinejohns/memU/memu/complete_setup_orchestrator.py:269: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result.end_time = datetime.utcnow()\n/Users/divinejohns/memU/memu/complete_setup_orchestrator.py:233: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  start_time = datetime.utcnow()\n/Users/divinejohns/memU/memu/complete_setup_orchestrator.py:211: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  setup_summary[\"total_duration\"] = (datetime.utcnow() - self.start_time).total_seconds()\n/Users/divinejohns/memU/memu/complete_setup_orchestrator.py:221: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  setup_summary[\"end_time\"] = datetime.utcnow().isoformat()\n",
+      "duration": 308.9455552101135
+    },
+    "monitoring": {
+      "success": false,
+      "error": "Insufficient monitoring services: []",
+      "duration": 0.11664891242980957
+    },
+    "observability": {
+      "success": false,
+      "error": "No observability services running: []",
+      "duration": 0.003100872039794922
+    },
+    "compliance": {
+      "success": true,
+      "details": "Compliance automation executed successfully",
+      "duration": 1.4682986736297607
+    },
+    "chaos_engineering": {
+      "success": true,
+      "details": "Chaos engineering tests executed successfully",
+      "duration": 4777.572891950607
+    },
+    "task_orchestration": {
+      "success": false,
+      "error": "/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py:72: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)\n  Base = declarative_base()\n/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py:82: SAWarning: Can't validate argument 'check_constraint'; can't locate any SQLAlchemy dialect named 'check'\n  priority = Column(Integer, nullable=False, default=5, check_constraint='priority BETWEEN 1 AND 10')\n/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py:91: SAWarning: Can't validate argument 'check_constraint'; can't locate any SQLAlchemy dialect named 'check'\n  alignment_score = Column(Integer, nullable=False, default=0, check_constraint='alignment_score BETWEEN 0 AND 100')\n/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py:177: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n  @validator('name')\n/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py:183: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n  @validator('tags')\n/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py:187: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n  @root_validator\nTraceback (most recent call last):\n  File \"/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py\", line 164, in <module>\n    class TaskDefinitionModel(BaseModel):\n    ...<30 lines>...\n            return values\n  File \"/Users/divinejohns/memU/memu/enterprise_task_orchestrator.py\", line 187, in TaskDefinitionModel\n    @root_validator\n     ^^^^^^^^^^^^^^\n  File \"/Users/divinejohns/memU/memu/venv/lib/python3.13/site-packages/pydantic/deprecated/class_validators.py\", line 234, in root_validator\n    return root_validator()(*__args)  # type: ignore\n           ~~~~~~~~~~~~~~^^\n  File \"/Users/divinejohns/memU/memu/venv/lib/python3.13/site-packages/pydantic/deprecated/class_validators.py\", line 240, in root_validator\n    raise PydanticUserError(\n    ...<3 lines>...\n    )\npydantic.errors.PydanticUserError: If you use `@root_validator` with pre=False (the default) you MUST specify `skip_on_failure=True`. Note that `@root_validator` is deprecated and should be replaced with `@model_validator`.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/root-validator-pre-skip\n",
+      "duration": 0.5551121234893799
+    },
+    "validation": {
+      "success": false,
+      "error": "Insufficient healthy services: []",
+      "duration": 0.028780221939086914
+    },
+    "optimization": {
+      "success": true,
+      "details": "Performance issues detected: ['High memory usage']",
+      "duration": 1.0197629928588867
+    }
+  },
+  "overall_success": false,
+  "total_duration": 5089.710631,
+  "final_status": "failed",
+  "end_time": "2025-09-20T02:06:03.329943+00:00"
+}

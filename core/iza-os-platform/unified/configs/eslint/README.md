@@ -1,0 +1,3 @@
+# Eslint/
+
+Linting configurations
